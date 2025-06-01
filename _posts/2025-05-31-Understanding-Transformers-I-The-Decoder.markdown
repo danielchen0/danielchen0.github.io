@@ -59,7 +59,7 @@ You may notice that this looks very similar to the encoder block, I will discuss
 
 Let us now focus on the topic of this blog post which is Decoder-only architectures such as GPT-2. A model like this consumes a sentence and predicts the next token. 
 
-A model like this can be broken down into simple steps:
+A model like this can be broken down into simple steps, each corresponding to a part of the diagram above:
 
 1. Receive an input sentence: "Data visualization empowers users to"
 
