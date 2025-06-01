@@ -73,11 +73,13 @@ A model like this can be broken down into simple steps:
             <img src="/assets/embedding-meaning.png"
                 style="width: 100%; height: 100%; display: block; margin: 0 auto;"/>
             <div class='caption'>
-                <span class='caption-label'>Figure 3.</span> Subtracting the embedding vectors for man and women is equivalent to subtracting the embedding vectors for uncle and aunt (3Blue1Brown, 2024).
+                <span class='caption-label'>Figure 5.</span> Subtracting the embedding vectors for man and women is equivalent to subtracting the embedding vectors for uncle and aunt (3Blue1Brown, 2024).
             </div>
         </div>
 
-3. **Attention**: This corresponds to the "Masked Multi-head attention" box in the transformer diagram, it works as follows: For each embedding (corresponding to an input token), apply special transforms (understood to be _weights_ matrices, but this isn't too important) $W_K$, $W_Q$, and $W_V$ to get the Key, Query, and Value vectors corresponding to the token, respectively.
+3. **Positional encodings** Special _positional encoding_ vectors are added to each embedding to add meaning about the position of the token in the sentence. For example, there is a positional encoding vector for position 1, and it is added to the first token only.
+
+4. **Attention**: This corresponds to the "Masked Multi-head attention" box in the transformer diagram, it works as follows: For each embedding (corresponding to an input token), apply special transforms (understood to be _weights_ matrices, but this isn't too important) $W_K$, $W_Q$, and $W_V$ to get the Key, Query, and Value vectors corresponding to the token, respectively.
    - Such vectors can be understood as follows: 
      - The Key vector is a vector such that when multiplied by another token's Query vector, gives us a magnitude representing how much _attention_ that other token is paying attention to us. 
      - The Query vector is symmetrically a vector such that, when multiplied by another token's Key vector, gives us a magnitude representing how much _attention_ our token is paying attention to that other token.
@@ -87,11 +89,11 @@ A model like this can be broken down into simple steps:
    - This attention is called _masked_ because we disallow tokens from paying attention to tokens ahead of it in the sentence, by zeroing out these values.
    - This attention is called _multi-head_ because technically, we run 12 of these attention heads in parallel, each doing the above as described, but for smaller sections of the input embeddings. For example, one attention head would look at the first 12th of each embedding. The second attention head would look at the second 12th of each embedding, etc.
 
-4. Once we have these scaled attention-value vectors, we run these through a Multilayer Perceptron (MLP). This corresponds to the "Feed Forward" box in the transformer diagram (note: MLPs are only one type of Feed Forward network, but not all Feed Forward networks are MLPs). This adds many layers of non linearity that allows the transformer to learn deep features about these vectors.
+5. Once we have these scaled attention-value vectors, we run these through a Multilayer Perceptron (MLP). This corresponds to the "Feed Forward" box in the transformer diagram (note: MLPs are only one type of Feed Forward network, but not all Feed Forward networks are MLPs). This adds many layers of non linearity that allows the transformer to learn deep features about these vectors.
 
-5. Steps 3-4 constitute one transformer _block_. The outputs are then fed to the next block. This process can be repeated as many times as desired. In GPT-2's case, this is repeated 12 times.
+6. Steps 4-5 constitute one transformer _block_. The outputs are then fed to the next block. This process can be repeated as many times as desired. In GPT-2's case, this is repeated 12 times.
 
-6. At the output end of the last transformer block, we apply a softmax layer to convert the outputs to probabilities. This represents the probability of a particular token being the next token in an input sentence.
+7. At the output end of the last transformer block, we apply a softmax layer to convert the outputs to probabilities. This represents the probability of a particular token being the next token in an input sentence.
 
 ## References
 
