@@ -15,7 +15,7 @@ This is my personal website built with Jekyll, hosted on GitHub Pages. Visit it 
 ### Prerequisites
 
 - Ruby
-- Bundler (Ruby package manager)
+- Bundler (Ruby package manager): `sudo gem install bundler`
 - Jekyll (~> 4.2.1)
 
 ### Setup
