@@ -57,7 +57,7 @@ You may notice that this looks very similar to the encoder block, I will discuss
 
 ## Decoder-only transformers - GPT-2
 
-Let us now focus on the topic of this blog post which is Decoder-only architectures such as GPT-2. A model like this consumes a sentence and predicts the next token. 
+Let us now focus on the topic of this blog post which is Decoder-only architectures such as GPT-2. A model like this consumes a sentence and predicts the next token. Some ideas below are inspired by the Transformer Explainer tool (Liang, D. & Klein, D.).
 
 A model like this can be broken down into simple steps, each corresponding to a part of the diagram above:
 
@@ -99,6 +99,8 @@ A model like this can be broken down into simple steps, each corresponding to a 
 3Blue1Brown. (2024, May 27). How word vectors encode meaning [Video]. YouTube. https://www.youtube.com/watch?v=FJtFZwbvkI4
 
 Esmailbeigi, R. (2023, January 20). BERT, GPT, and BART: A short comparison. Medium. https://medium.com/@reyhaneh.esmailbeigi/bert-gpt-and-bart-a-short-comparison-5d6a57175fca
+
+Liang, D., & Klein, D. (n.d.). Transformer explainer. Polo Club of Data Science, Georgia Institute of Technology. https://poloclub.github.io/transformer-explainer/
 
 TensorFlow. (n.d.). Text generation with a transformer. TensorFlow. Retrieved June 1, 2025, from https://www.tensorflow.org/text/tutorials/transformer#the_cross_attention_layer
 
