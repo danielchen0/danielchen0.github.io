@@ -37,7 +37,9 @@ That is - Decoder only architectures mimic the right side of the Transformer sta
 
 Let us now focus on the topic of this blog post which is Decoder-only architectures such as GPT-2. A model like this consumes a sentence and predicts the next token. 
 
-The model can be broken down into simple steps:
+Note: I chose to remove details like multi-head attention since these are not important at a high level.
+
+A model like this can be broken down into simple steps:
 
 1. Receive an input sentence: "Data visualization empowers users to"
 
@@ -51,6 +53,11 @@ The model can be broken down into simple steps:
      - The Value vector is a vector that represents the original embedding of the token in a new vector space, such that, when multiplied by attention (a scalar number), gives us a vector representing the original token scaled by the attention the current token has for it.
    - Therefore, for each input token's embedding, we get a list of vectors that represent other vectors in the sentence, scaled by the attention this token has for them.
 
+4. Once we have these scaled attention-value vectors, we run these through a Multilayer Perceptron (MLP). This adds many layers of non linearity that allows the transformer to learn deep features about these vectors.
+
+5. Steps 3-4 constitute one transformer _block_. The outputs are then fed to the next block. This process can be repeated as many times as desired. In GPT-2's case, this is repeated 12 times.
+
+6. At the output end of the last transformer block, we apply a softmax layer to convert the outputs to probabilities. This represents the probability of a particular token being the next token in an input sentence.
 
 ## References
 
