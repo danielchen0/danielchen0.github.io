@@ -59,8 +59,6 @@ You may notice that this looks very similar to the encoder block, I will discuss
 
 Let us now focus on the topic of this blog post which is Decoder-only architectures such as GPT-2. A model like this consumes a sentence and predicts the next token. 
 
-Note: I chose to remove details like multi-head attention since these are not important at a high level.
-
 A model like this can be broken down into simple steps:
 
 1. Receive an input sentence: "Data visualization empowers users to"
@@ -86,6 +84,8 @@ A model like this can be broken down into simple steps:
      - The Value vector is a vector that represents the original embedding of the token in a new vector space, such that, when multiplied by attention (a scalar number), gives us a vector representing the original token scaled by the attention the current token has for it.
 
    - Therefore, for each input token's embedding, we get a list of vectors that represent other vectors in the sentence, scaled by the attention this token has for them.
+   - This attention is called _masked_ because we disallow tokens from paying attention to tokens ahead of it in the sentence, by zeroing out these values.
+   - This attention is called _multi-head_ because technically, we run 12 of these attention heads in parallel, each doing the above as described, but for smaller sections of the input embeddings. For example, one attention head would look at the first 12th of each embedding. The second attention head would look at the second 12th of each embedding, etc.
 
 4. Once we have these scaled attention-value vectors, we run these through a Multilayer Perceptron (MLP). This corresponds to the "Feed Forward" box in the transformer diagram (note: MLPs are only one type of Feed Forward network, but not all Feed Forward networks are MLPs). This adds many layers of non linearity that allows the transformer to learn deep features about these vectors.
 
