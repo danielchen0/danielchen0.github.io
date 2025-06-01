@@ -9,7 +9,7 @@ layout: null
     <meta charset='UTF-8'>
     <meta content='width=device-width, initial-scale=1' name='viewport'/>
 
-    <meta name='description' content='Daniel Chen is a Research Engineer at Create'>
+    <meta name='description' content='Daniel Chen: AI Researcher'>
     <!-- A decent browser will parse this fine:
          https://webmasters.stackexchange.com/questions/92744. -->
     <meta name='keywords' content='
