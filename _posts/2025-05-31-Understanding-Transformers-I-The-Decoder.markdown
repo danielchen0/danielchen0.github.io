@@ -56,7 +56,7 @@ A model like this can be broken down into simple steps:
 
    - Therefore, for each input token's embedding, we get a list of vectors that represent other vectors in the sentence, scaled by the attention this token has for them.
 
-4. Once we have these scaled attention-value vectors, we run these through a Multilayer Perceptron (MLP). This adds many layers of non linearity that allows the transformer to learn deep features about these vectors.
+4. Once we have these scaled attention-value vectors, we run these through a Multilayer Perceptron (MLP). This corresponds to the "Feed Forward" box in the transformer diagram (note: MLPs are only one type of Feed Forward network, but not all Feed Forward networks are MLPs). This adds many layers of non linearity that allows the transformer to learn deep features about these vectors.
 
 5. Steps 3-4 constitute one transformer _block_. The outputs are then fed to the next block. This process can be repeated as many times as desired. In GPT-2's case, this is repeated 12 times.
 
