@@ -49,7 +49,7 @@ Therefore, a decoder-only transformer would look like this:
     <img src="/assets/decoder-only.png"
          style="width: 50%; height: 50%; display: block; margin: 0 auto;"/>
     <div class='caption'>
-        <span class='caption-label'>Figure 4.</span> The decoder-only architecture.
+        <span class='caption-label'>Figure 4.</span> The decoder-only architecture [Original image created by Daniel Chen, 2025].
     </div>
 </div>
 
