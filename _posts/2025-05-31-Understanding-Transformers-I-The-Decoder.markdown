@@ -33,6 +33,28 @@ An easy way to visualize this is to divide the Transformer and relate it to thes
 
 That is - Decoder only architectures mimic the right side of the Transformer stack, while encoder only architectures mimic the left side.
 
+There is one subtle detail - in decoder only models i.e. the right side, there is of course no cross attention mechanism that connects the encoders to the decoders, so the second multi-head attention unit should be removed:
+
+<div class='figure'>
+    <img src="/assets/cross-attention.png"
+         style="width: 100%; height: 100%; display: block; margin: 0 auto;"/>
+    <div class='caption'>
+        <span class='caption-label'>Figure 3.</span> The encoder decoder transformer features a Cross attention mechanism that connects these together. In a decoder only model this is not present (Tensorflow).
+    </div>
+</div>
+
+Therefore, a decoder block would look like this:
+
+<div class='figure'>
+    <img src="/assets/decoder-only.png"
+         style="width: 100%; height: 100%; display: block; margin: 0 auto;"/>
+    <div class='caption'>
+        <span class='caption-label'>Figure 4.</span> The decoder-only architecture.
+    </div>
+</div>
+
+You may notice that this looks very similar to the encoder block, I will discuss the subtle differences in a separate post.
+
 ## Decoder-only transformers - GPT-2
 
 Let us now focus on the topic of this blog post which is Decoder-only architectures such as GPT-2. A model like this consumes a sentence and predicts the next token. 
@@ -76,5 +98,7 @@ A model like this can be broken down into simple steps:
 3Blue1Brown. (2024, May 27). How word vectors encode meaning [Video]. YouTube. https://www.youtube.com/watch?v=FJtFZwbvkI4
 
 Esmailbeigi, R. (2023, January 20). BERT, GPT, and BART: A short comparison. Medium. https://medium.com/@reyhaneh.esmailbeigi/bert-gpt-and-bart-a-short-comparison-5d6a57175fca
+
+TensorFlow. (n.d.). Text generation with a transformer. TensorFlow. Retrieved June 1, 2025, from https://www.tensorflow.org/text/tutorials/transformer#the_cross_attention_layer
 
 Vaswani, A., Shazeer, N., Parmar, N., Uszoreit, J., Jones, L., Gomez, A. N., Kaiser, Ł., & Polosukhin, I. (2017). Attention is all you need. In Advances in Neural Information Processing Systems (pp. 5998–6008). https://arxiv.org/abs/1706.03762
