@@ -44,13 +44,16 @@ A model like this can be broken down into simple steps:
 1. Receive an input sentence: "Data visualization empowers users to"
 
 2. For each _token_ in the sentence, convert it to an _embedding_ vector of fixed length.
-   - A _token_ is a string of continuous characters treated as a unit.
+   - A _token_ is a string of continuous characters treated as a unit. For example, in GPT-2's tokenizer, 'data', 'visualization', 'users' and 'to' are all tokens. However, 'em' and 'powers' are separate tokens.
+     - There are a variety of tokenization strategies but this is one such example.
+   - An _embedding_ is a vector that corresponds to the token, and represents its meaning.
 
 3. For each embedding (corresponding to an input token), apply special transforms (understood to be _weights_ matrices, but this isn't too important) $W_K$, $W_Q$, and $W_V$ to get the Key, Query, and Value vectors corresponding to the token, respectively.
    - Such vectors can be understood as follows: 
      - The Key vector is a vector such that when multiplied by another token's Query vector, gives us a magnitude representing how much _attention_ that other token is paying attention to us. 
      - The Query vector is symmetrically a vector such that, when multiplied by another token's Key vector, gives us a magnitude representing how much _attention_ our token is paying attention to that other token.
      - The Value vector is a vector that represents the original embedding of the token in a new vector space, such that, when multiplied by attention (a scalar number), gives us a vector representing the original token scaled by the attention the current token has for it.
+
    - Therefore, for each input token's embedding, we get a list of vectors that represent other vectors in the sentence, scaled by the attention this token has for them.
 
 4. Once we have these scaled attention-value vectors, we run these through a Multilayer Perceptron (MLP). This adds many layers of non linearity that allows the transformer to learn deep features about these vectors.
