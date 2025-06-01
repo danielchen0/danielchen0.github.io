@@ -79,7 +79,7 @@ A model like this can be broken down into simple steps:
             </div>
         </div>
 
-3. **Attention**: For each embedding (corresponding to an input token), apply special transforms (understood to be _weights_ matrices, but this isn't too important) $W_K$, $W_Q$, and $W_V$ to get the Key, Query, and Value vectors corresponding to the token, respectively.
+3. **Attention**: This corresponds to the "Masked Multi-head attention" box in the transformer diagram, it works as follows: For each embedding (corresponding to an input token), apply special transforms (understood to be _weights_ matrices, but this isn't too important) $W_K$, $W_Q$, and $W_V$ to get the Key, Query, and Value vectors corresponding to the token, respectively.
    - Such vectors can be understood as follows: 
      - The Key vector is a vector such that when multiplied by another token's Query vector, gives us a magnitude representing how much _attention_ that other token is paying attention to us. 
      - The Query vector is symmetrically a vector such that, when multiplied by another token's Key vector, gives us a magnitude representing how much _attention_ our token is paying attention to that other token.
