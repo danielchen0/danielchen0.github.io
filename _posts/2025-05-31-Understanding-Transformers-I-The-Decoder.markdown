@@ -43,11 +43,11 @@ There is one subtle detail - in decoder only models i.e. the right side, there i
     </div>
 </div>
 
-Therefore, a decoder block would look like this:
+Therefore, a decoder-only transformer would look like this:
 
 <div class='figure'>
     <img src="/assets/decoder-only.png"
-         style="width: 100%; height: 100%; display: block; margin: 0 auto;"/>
+         style="width: 50%; height: 50%; display: block; margin: 0 auto;"/>
     <div class='caption'>
         <span class='caption-label'>Figure 4.</span> The decoder-only architecture.
     </div>
