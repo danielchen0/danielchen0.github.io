@@ -46,7 +46,16 @@ A model like this can be broken down into simple steps:
 2. For each _token_ in the sentence, convert it to an _embedding_ vector of fixed length.
    - A _token_ is a string of continuous characters treated as a unit. For example, in GPT-2's tokenizer, 'data', 'visualization', 'users' and 'to' are all tokens. However, 'em' and 'powers' are separate tokens.
      - There are a variety of tokenization strategies but this is one such example.
-   - An _embedding_ is a vector that corresponds to the token, and represents its meaning.
+   - An _embedding_ is a vector that corresponds to the token, and represents its meaning. 
+   - The embedding vector represents the token's meaning in the sense that vector operations can be performed to produce similar concepts:
+
+        <div class='figure'>
+            <img src="/assets/embedding-meaning.png"
+                style="width: 100%; height: 100%; display: block; margin: 0 auto;"/>
+            <div class='caption'>
+                <span class='caption-label'>Figure 3.</span> Subtracting the embedding vectors for man and women is equivalent to subtracting the embedding vectors for uncle and aunt (3Blue1Brown, 2024).
+            </div>
+        </div>
 
 3. For each embedding (corresponding to an input token), apply special transforms (understood to be _weights_ matrices, but this isn't too important) $W_K$, $W_Q$, and $W_V$ to get the Key, Query, and Value vectors corresponding to the token, respectively.
    - Such vectors can be understood as follows: 
@@ -63,6 +72,8 @@ A model like this can be broken down into simple steps:
 6. At the output end of the last transformer block, we apply a softmax layer to convert the outputs to probabilities. This represents the probability of a particular token being the next token in an input sentence.
 
 ## References
+
+3Blue1Brown. (2024, May 27). How word vectors encode meaning [Video]. YouTube. https://www.youtube.com/watch?v=FJtFZwbvkI4
 
 Esmailbeigi, R. (2023, January 20). BERT, GPT, and BART: A short comparison. Medium. https://medium.com/@reyhaneh.esmailbeigi/bert-gpt-and-bart-a-short-comparison-5d6a57175fca
 
