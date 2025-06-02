@@ -65,7 +65,7 @@ A model like this can be broken down into simple steps, each corresponding to a 
 
 1. Receive an input sentence: "Data visualization empowers users to"
 
-2. **Tokenization**: For each _token_ in the sentence, convert it to an _embedding_ vector of fixed length.
+2. **Tokenization and embeddings**: For each _token_ in the sentence, convert it to an _embedding_ vector of fixed length.
    - A _token_ is a string of continuous characters treated as a unit. For example, in GPT-2's tokenizer, 'data', 'visualization', 'users' and 'to' are all tokens. However, 'em' and 'powers' are separate tokens.
    - An _embedding_ is a vector that corresponds to the token, and represents its meaning. 
    - The embedding vector represents the token's meaning in the sense that vector operations can be performed to produce similar concepts:
