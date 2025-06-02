@@ -7,7 +7,7 @@ published: true
 mathjax: yes
 ---
 
-In this blog post I give a gentle introduction to the Transformer architecture as originally presented by Vaswani et al., in their landmark paper, "Attention Is All You Need". My focus will be on visuals, intuition, and just enough math to get the concepts across and keep them memorable. Specifically, I intend to explain the Transformer in three parts: Decoders, Encoders, and Cross Attention. This blog post covers part one of this list.
+In this blog post I give an introduction to the Transformer architecture as originally presented by Vaswani et al., in their landmark paper, "Attention Is All You Need". My focus will be on visuals and intuition. Specifically, I intend to explain the Transformer in three parts: Decoders, Encoders, and Cross Attention. This blog post covers part one of this list.
 
 <div class='figure'>
     <img src="/assets/encoder-decoder.png"
@@ -95,6 +95,10 @@ A model like this can be broken down into simple steps, each corresponding to a 
 6. Steps 4-5 constitute one transformer _block_. The outputs are then fed to the next block. This process can be repeated as many times as desired. In GPT-2's case, this is repeated 12 times.
 
 7. At the output end of the last transformer block, we apply a softmax layer to convert the outputs to probabilities. This represents the probability of a particular token being the next token in an input sentence.
+
+This completes the architecture. There are a couple of details I left out above because I felt they would disrupt the flow and are of minor importance. They are as follows:
+
+8. **Add and Norm**: There are several layers of Add and Normalization, how this works is we take the input before MLP or attention respectively and add it to the output, and then normalize the values to some range ex. between 0 and 1. The point here is to avoid vanishing gradient and exploding gradient problems by feeding the original inputs through the model and then ensuring output numbers don't get too large.
 
 ## References
 
