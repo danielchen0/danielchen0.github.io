@@ -80,7 +80,7 @@ A model like this can be broken down into simple steps, each corresponding to a 
 
 3. **Positional encodings** Special _positional encoding_ vectors are added to each embedding to add meaning about the position of the token in the sentence. For example, there is a positional encoding vector for position 1, and it is added to the first token only.
 
-4. **Attention**: This corresponds to the "Masked Multi-head attention" box in the transformer diagram, it works as follows: For each embedding $\vec{e}$ (corresponding to an input token), apply special transforms (understood to be _weights_ matrices, but this isn't too important) $W_K$, $W_Q$, and $W_V$ to get the Key, Query, and Value vectors corresponding to the token, respectively.
+4. **Attention**: This corresponds to the "Masked Multi-head attention" box in the transformer diagram, it works as follows: For each embedding $\vec{e}$ (corresponding to an input token), apply special transforms (understood to be _weights_ matrices, but this isn't too important) $W_K$, $W_Q$, and $W_V$ to get the Key, Query, and Value vectors corresponding to the token, respectively. These matrices are _learnt_ during the training process of the transformer.
    - Such vectors can be understood as follows: 
      - The Key vector $\vec{k} = W_k \vec{e}$ is a vector such that when multiplied by another token's Query vector, gives us a magnitude representing how much _attention_ that other token is paying attention to us. 
      - The Query vector $\vec{q} = W_q \vec{e}$ is symmetrically a vector such that, when multiplied by another token's Key vector, gives us a magnitude representing how much _attention_ our token is paying attention to that other token.
