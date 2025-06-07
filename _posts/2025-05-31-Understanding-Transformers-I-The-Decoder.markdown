@@ -88,7 +88,7 @@ A model like this can be broken down into simple steps, each corresponding to a 
 
    - To calculate the attention token $i$ has for token $j$, we could do something like this: $\vec{q_i}^\intercal \cdot \vec{k_j}$ thus getting a scalar number via the usual dot product. Then we could scale the value vector of token $j$, so that our scaled attention for token $j$ is just  $\left(\vec{q_i}^\intercal \cdot \vec{k_j}\right) \vec{v_j}$.
    - An astute reader would note that instead of doing each of these calculations as a for loop over all $i$ and $j$, we can get all of this together as one matrix mulitplication $Q^\intercal K V$, where $Q$, $K$, $V$ are matrices such that the ith column is the vector for the ith token.
-   - The variance of the multiplication of $Q$ and $K$ happens to be $\sqrt{d}$ where $d$ is the dimensions of the query, key, and value vectors, so if we divide by this we can reduce the variance of the multiplication to 1. And we can then apply a softmax so that the sum of attention scores a token has for other tokens adds up to 1. This would give us $\text{softmax}\left( \frac{Q^\intercal K}{\sqrt{d}} \right) V$.
+   - The variance of the multiplication of $Q$ and $K$ happens to be $\sqrt{d}$ where $d$ is the dimensions of the query, key, and value vectors (user3667125, 2020), so if we divide by this we can reduce the variance of the multiplication to 1. And we can then apply a softmax so that the sum of attention scores a token has for other tokens adds up to 1. This would give us $\text{softmax}\left( \frac{Q^\intercal K}{\sqrt{d}} \right) V$.
    
    - Therefore, for each input token's embedding, we get a list of vectors that represent other vectors in the sentence, scaled by the attention this token has for them.
    - This attention is called _masked_ because we disallow tokens from paying attention to tokens ahead of it in the sentence, by zeroing out these values.
@@ -113,5 +113,7 @@ Esmailbeigi, R. (2023, January 20). BERT, GPT, and BART: A short comparison. Med
 Liang, D., & Klein, D. (n.d.). Transformer explainer. Polo Club of Data Science, Georgia Institute of Technology. https://poloclub.github.io/transformer-explainer/
 
 TensorFlow. (n.d.). Text generation with a transformer. TensorFlow. Retrieved June 1, 2025, from https://www.tensorflow.org/text/tutorials/transformer#the_cross_attention_layer
+
+user3667125. (2020, August 16). Answer to "Why does this multiplication of Q and K have a variance of d_k, in scaled dot product attention?" Artificial Intelligence Stack Exchange. https://ai.stackexchange.com/a/25057
 
 Vaswani, A., Shazeer, N., Parmar, N., Uszoreit, J., Jones, L., Gomez, A. N., Kaiser, Ł., & Polosukhin, I. (2017). Attention is all you need. In Advances in Neural Information Processing Systems (pp. 5998–6008). https://arxiv.org/abs/1706.03762
