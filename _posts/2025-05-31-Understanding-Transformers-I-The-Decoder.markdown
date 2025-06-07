@@ -82,10 +82,11 @@ A model like this can be broken down into simple steps, each corresponding to a 
 
 4. **Attention**: This corresponds to the "Masked Multi-head attention" box in the transformer diagram, it works as follows: For each embedding (corresponding to an input token), apply special transforms (understood to be _weights_ matrices, but this isn't too important) $W_K$, $W_Q$, and $W_V$ to get the Key, Query, and Value vectors corresponding to the token, respectively.
    - Such vectors can be understood as follows: 
-     - The Key vector is a vector such that when multiplied by another token's Query vector, gives us a magnitude representing how much _attention_ that other token is paying attention to us. 
-     - The Query vector is symmetrically a vector such that, when multiplied by another token's Key vector, gives us a magnitude representing how much _attention_ our token is paying attention to that other token.
-     - The Value vector is a vector that represents the original embedding of the token in a new vector space, such that, when multiplied by attention (a scalar number), gives us a vector representing the original token scaled by the attention the current token has for it.
+     - The Key vector $\vec{k}$ is a vector such that when multiplied by another token's Query vector, gives us a magnitude representing how much _attention_ that other token is paying attention to us. 
+     - The Query vector $\vec{q}$ is symmetrically a vector such that, when multiplied by another token's Key vector, gives us a magnitude representing how much _attention_ our token is paying attention to that other token.
+     - The Value vector $\vec{v}$ is a vector that represents the original embedding of the token in a new vector space, such that, when multiplied by attention (a scalar number), gives us a vector representing the original token scaled by the attention the current token has for it.
 
+   - To calculate the attention token $i$ has for token $j$, we could do something like this: $\vec{q_i}^\intercal \cdot \vec{k_j}$ thus getting a scalar number via the usual dot product. Then we could scale the value vector of token $j$, so that our scaled attention for token $j$ is just  $\left(\vec{q_i}^\intercal \cdot \vec{k_j}\right) \vec{v_j}$
    - Therefore, for each input token's embedding, we get a list of vectors that represent other vectors in the sentence, scaled by the attention this token has for them.
    - This attention is called _masked_ because we disallow tokens from paying attention to tokens ahead of it in the sentence, by zeroing out these values.
    - This attention is called _multi-head_ because technically, we run 12 of these attention heads in parallel, each doing the above as described, but for smaller sections of the input embeddings. For example, one attention head would look at the first 12th of each embedding. The second attention head would look at the second 12th of each embedding, etc.
