@@ -92,7 +92,7 @@ A model like this can be broken down into simple steps, each corresponding to a 
    
    - Therefore, for each input token's embedding, we get a list of vectors that represent other vectors in the sentence, scaled by the attention this token has for them.
    - This attention is called _masked_ because we disallow tokens from paying attention to tokens ahead of it in the sentence, by zeroing out these values.
-   - This attention is called _multi-head_ because technically, we run 12 of these attention heads in parallel, each doing the above as described, but for smaller sections of the input embeddings. For example, one attention head would look at the first 12th of each embedding. The second attention head would look at the second 12th of each embedding, etc.
+   - This attention is called _multi-head_ because technically, we run 12 of these attention heads in parallel, each doing the above as described, but for smaller sections of the input embeddings. For example, one attention head would look at the first 12th of each embedding. The second attention head would look at the second 12th of each embedding, etc. And then we just concatenate these results together to produce the same output had we done it all in one single head of attention.
 
 5. Once we have these scaled attention-value vectors, we run these through a Multilayer Perceptron (MLP). This corresponds to the "Feed Forward" box in the transformer diagram (note: MLPs are only one type of Feed Forward network, but not all Feed Forward networks are MLPs). This adds many layers of non linearity that allows the transformer to learn deep features about these vectors.
 
