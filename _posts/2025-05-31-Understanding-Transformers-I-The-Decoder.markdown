@@ -88,6 +88,8 @@ A model like this can be broken down into simple steps, each corresponding to a 
 
    - To calculate the attention token $i$ has for token $j$, we could do something like this: $\vec{q_i}^\intercal \cdot \vec{k_j}$ thus getting a scalar number via the usual dot product. Then we could scale the value vector of token $j$, so that our scaled attention for token $j$ is just  $\left(\vec{q_i}^\intercal \cdot \vec{k_j}\right) \vec{v_j}$.
    - An astute reader would note that instead of doing each of these calculations as a for loop over all $i$ and $j$, we can get all of this together as one matrix mulitplication $Q^\intercal K V$, where $Q$, $K$, $V$ are matrices such that the ith column is the vector for the ith token.
+   - We can normalize by the dimensions of the vectors $d$, and apply a softmax so that the sum of attention scores a token has for other tokens adds up to 1. This would give us $\text{softmax}\left( \frac{Q^\intercal K}{\sqrt{d}} \right) V$.
+   
    - Therefore, for each input token's embedding, we get a list of vectors that represent other vectors in the sentence, scaled by the attention this token has for them.
    - This attention is called _masked_ because we disallow tokens from paying attention to tokens ahead of it in the sentence, by zeroing out these values.
    - This attention is called _multi-head_ because technically, we run 12 of these attention heads in parallel, each doing the above as described, but for smaller sections of the input embeddings. For example, one attention head would look at the first 12th of each embedding. The second attention head would look at the second 12th of each embedding, etc.
