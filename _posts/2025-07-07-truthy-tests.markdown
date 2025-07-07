@@ -138,6 +138,38 @@ Readability counts
 
 If you read these three sentences, you would probably realize that truthy/falsy values violate all three - implicit boolean checks are inherently not explicit, and they are harder to read if you don't know what the defaults are.
 
+## Confusing and inefficient when layered
+
+In python, `None` evaluates to `False` in boolean contexts. This means that there are two cases when an `Optional[int]` evaluates to `False`: when it is `0`, and when it is `None`.
+
+You may forget this when writing code and do:
+
+```python
+def myFunc(myVal : Optional[int] = None) -> None:
+    if not myVal:
+        print("No val set... performing handling...")
+    else:
+        if myVal == 0:
+            print("Handling no quantity")
+        ...
+```
+
+This is a bug. Remember - _both_ the `None` and `0` values hit the `if` block, so you need to do this:
+
+```python
+def myFunc(myVal : Optional[int] = None) -> None:
+    if myVal is None:
+        print("No val set... performing handling...")
+    else:
+        if myVal == 0:
+            print("Handling no quantity")
+        ...
+```
+
+In this case we weren't able to use the truthy values at all. We _could_ do `!myVal` in the `else` block if we think we're smart, but that would require you to read all of the code _around_ that block in order to realize that `myVal` couldn't be a possible value in the `else` block. Doing the explicit check is much more readable.
+
+
+
 # Conclusion
 
 Based on the above I don't see much value add to using these truthy falsy values and have found they introduce more bugs than they prevent.
