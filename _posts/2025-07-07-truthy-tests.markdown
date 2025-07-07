@@ -136,7 +136,7 @@ Readability counts
 ...
 ```
 
-If you read these three sentences, you would probably realize that truthy/falsy values violate all three - implicit boolean checks are inherently not explicit, and they are harder to read if you don't know what the defaults are.
+If you read these sentences, you would probably realize that truthy/falsy values violate both - implicit boolean checks are inherently not explicit, and they are harder to read if you don't know what the defaults are.
 
 ## Confusing and inefficient when layered
 
