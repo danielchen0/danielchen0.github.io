@@ -37,7 +37,7 @@ There is one subtle detail - in decoder only models i.e. the right side, there i
 
 <div class='figure'>
     <img src="/assets/cross-attention.png"
-         style="width: 100%; height: 100%; display: block; margin: 0 auto;"/>
+         style="width: 50%; height: 50%; display: block; margin: 0 auto;"/>
     <div class='caption'>
         <span class='caption-label'>Figure 3.</span> The encoder decoder transformer features a Cross attention mechanism that connects these together. In a decoder only model this is not present (Tensorflow).
     </div>
