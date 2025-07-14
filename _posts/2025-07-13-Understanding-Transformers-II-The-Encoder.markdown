@@ -1,7 +1,7 @@
 ---
 title: Understanding Transformers II - The Encoder
 layout: default
-date: 2025-07-31
+date: 2025-07-13
 keywords: transformers
 published: true
 mathjax: yes
@@ -15,7 +15,7 @@ An encoder-only transformer looks like this:
 
 <div class='figure'>
     <img src="/assets/encoder-only.png"
-         style="width: 50%; height: 50%; display: block; margin: 0 auto;"/>
+         style="width: 25%; height: 25%; display: block; margin: 0 auto;"/>
     <div class='caption'>
         <span class='caption-label'>Figure 1.</span> The encoder-only architecture [Adapted from Vaswani et al., 2017].
     </div>
@@ -27,9 +27,9 @@ Studying encoder-only transformers such as BERT (Bidirectional Encoder Represent
 
 <div class='figure'>
     <img src="/assets/encoder-with-classifier.png"
-         style="width: 50%; height: 50%; display: block; margin: 0 auto;"/>
+         style="width: 100%; height: 100%; display: block; margin: 0 auto;"/>
     <div class='caption'>
-        <span class='caption-label'>Figure 1.</span> The BERT architecture with a classifier head (Khalid 2021).
+        <span class='caption-label'>Figure 2.</span> The BERT architecture with a classifier head (Khalid 2021).
     </div>
 </div>
 
@@ -43,9 +43,9 @@ A key difference here between BERT and GPT-2 (decoder only) is that BERT consume
 
 <div class='figure'>
     <img src="/assets/positional-encoder.png"
-         style="width: 50%; height: 50%; display: block; margin: 0 auto;"/>
+         style="width: 100%; height: 100%; display: block; margin: 0 auto;"/>
     <div class='caption'>
-        <span class='caption-label'>Figure 1.</span> In BERT, we have both positional _and_ segment encodings (Devlin 2019).
+        <span class='caption-label'>Figure 3.</span> In BERT, we have both positional _and_ segment encodings (Devlin 2019).
     </div>
 </div>
 
