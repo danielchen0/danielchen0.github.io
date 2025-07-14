@@ -40,14 +40,13 @@ A key difference here between BERT and GPT-2 (decoder only) is that BERT consume
 2. **Tokenization and embeddings**: The process of tokenization and embedding the tokens is identical to that of decoder models. One additional step is we add a _separator_ token (denoted SEP) between the two sentences.
 
 3. **Positional encodings**: Similar to the decoder-only transformer, we have positional vectors that we add to each token embedding to encode information about its position in the sentence. We also have _segment_ encodings to indicate whether the token is in the first or second sentence.
-
-<div class='figure'>
-    <img src="/assets/positional-encoder.png"
-         style="width: 100%; height: 100%; display: block; margin: 0 auto;"/>
-    <div class='caption'>
-        <span class='caption-label'>Figure 3.</span> In BERT, we have both positional _and_ segment encodings (Devlin 2019).
+    <div class='figure'>
+        <img src="/assets/positional-encoder.png"
+            style="width: 100%; height: 100%; display: block; margin: 0 auto;"/>
+        <div class='caption'>
+            <span class='caption-label'>Figure 3.</span> In BERT, we have both positional _and_ segment encodings (Devlin 2019).
+        </div>
     </div>
-</div>
 
 4. **Attention**: This corresponds to the "Multi-head attention" box in the transformer diagram. The process is nearly identical to the "Masked Multi-head attention" mechanism in the Decoder block so I will not repeat its details here. Recall that attention is called _masked_ when we disallow tokens from paying attention to tokens ahead of it in the sentence, by zeroing out these values. So, the only difference in the encoder case is we allow for tokens to pay attention to _all_ other tokens in the input sentence, since the attention is not masked here. We have an Add and Normalize step after this is done to avoid vanishing gradient problems.
 
