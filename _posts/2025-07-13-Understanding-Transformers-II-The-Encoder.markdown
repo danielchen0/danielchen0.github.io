@@ -23,13 +23,13 @@ An encoder-only transformer looks like this:
 
 ## Encoder-only Transformers - BERT
 
-Studying encoder-only transformers such as BERT (Bidirectional Encoder Representations from Transformers) (Devlin 2019) allows us to understand encoders as a concept. Unlike decoder-only transformers which consume sentences and predict the next token, encoder-only transformers take sentences and _encode_ them in a higher dimensional space. Encoders don't do any prediction of next tokens or any meaningful task on their own. If we want them to do something like classification, we need to add task specific layers at the end of the model. For classification problems, this would be the _classification head_ which would be some Multilayer Perceptron that consumes the encodings from the encoder blocks and outputs classification logits.
+Studying encoder-only transformers such as BERT (Bidirectional Encoder Representations from Transformers) (Devlin, 2019) allows us to understand encoders as a concept. Unlike decoder-only transformers which consume sentences and predict the next token, encoder-only transformers take sentences and _encode_ them in a higher dimensional space. Encoders don't do any prediction of next tokens or any meaningful task on their own. If we want them to do something like classification, we need to add task specific layers at the end of the model. For classification problems, this would be the _classification head_ which would be some Multilayer Perceptron that consumes the encodings from the encoder blocks and outputs classification logits.
 
 <div class='figure'>
     <img src="/assets/encoder-with-classifier.png"
          style="width: 100%; height: 100%; display: block; margin: 0 auto;"/>
     <div class='caption'>
-        <span class='caption-label'>Figure 2.</span> The BERT architecture with a classifier head (Khalid 2021).
+        <span class='caption-label'>Figure 2.</span> The BERT architecture with a classifier head (Khalid, 2021).
     </div>
 </div>
 
@@ -44,7 +44,7 @@ A key difference here between BERT and GPT-2 (decoder only) is that BERT consume
         <img src="/assets/positional-encoder.png"
             style="width: 100%; height: 100%; display: block; margin: 0 auto;"/>
         <div class='caption'>
-            <span class='caption-label'>Figure 3.</span> In BERT, we have both positional _and_ segment encodings (Devlin 2019).
+            <span class='caption-label'>Figure 3.</span> In BERT, we have both positional _and_ segment encodings (Devlin, 2019).
         </div>
     </div>
 
