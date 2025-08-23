@@ -58,10 +58,6 @@ A key difference here between BERT and GPT-2 (decoder only) is that BERT consume
 
 This completes the architecture. 
 
-## Training BERT
-
-Besides the subtle architecture differences of encoders and decoders, we should also discuss how BERT is trained.
-
 ## References
 
 Devlin, J., Chang, M.-W., Lee, K., & Toutanova, K. (2019). *BERT: Pre‑training of deep bidirectional transformers for language understanding* (arXiv:1810.04805). arXiv. [https://doi.org/10.48550/arXiv.1810.04805](https://doi.org/10.48550/arXiv.1810.04805)
