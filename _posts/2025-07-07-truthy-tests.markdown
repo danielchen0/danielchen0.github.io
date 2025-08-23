@@ -172,5 +172,5 @@ In this case we weren't able to use the truthy values at all. We _could_ do `!my
 
 # Conclusion
 
-Based on the above I don't see much value add to using these truthy falsy values and have found they introduce more bugs than they prevent.
+In conclusion, just don't...
 
