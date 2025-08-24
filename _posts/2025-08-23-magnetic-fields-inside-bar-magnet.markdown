@@ -57,6 +57,8 @@ Clearly, if you keep doing this recursion, you end up with a collection of ferro
 
 Now, intuitively, if you place a north pole somewhere in this array of north-south dipoles, the force enacted upon the north pole will tend to move towards the top (north side) of the magnet, hence why the field lines point towards the north pole of the overall bar magnet. 
 
+There is really no outside vs inside, at all points in space there are many of these ferromagnetic particles acting on those points inside of the overall bar magnet. Basically, the north pole of the magnet is implied by the particles and not the otherway around - the particles imbue an overall sense of north vs southness of the bar magnet.
+
 
 # Citations
 
