@@ -21,7 +21,7 @@ When reading about magnetic field lines for bar magnets, you will often hear tha
     <img src="/assets/bar-magnet.gif"
         style="width: 50%; height: 50%; display: block; margin: 0 auto;"/>
     <div class='caption'>
-        <span class='caption-label'>Figure 2.</span> Magnetic Field lines indicate which direction a north monopole will be pushed due to the magnetic field of the bar magnet (Nave).
+        <span class='caption-label'>Figure 2.</span> Magnetic Field lines are often shown going from north to south outside of the bar magnet, while south to north inside of the bar magnet. (Nave).
     </div>
 </div>
 
