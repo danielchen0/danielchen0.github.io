@@ -10,7 +10,7 @@ mathjax: yes
 When reading about magnetic field lines for bar magnets, you will often hear that field lines go from north to south outside the bar magnet, and they go from south to north inside of the bar magnet, thus forming closed loops. The direction of the field line is interpreted to be the direction of force the bar magnet imposes on a point north pole particle. So it would make sense that field lines go from north to south outside of the magnet, but why does it make sense that they would go from south to north then when _inside_ of a bar magnet? How can you ascertain what would happen to a north pole particle when you cannot physically measure this since you can't place a particle there physically? In otherwords, if there's no way to experimentally verify or dispute this, why do we say this? 
 
 <div class='figure'>
-    <img src="/assets/Bar-Magnet-Field-With-Compass.png"
+    <img src="/assets/Bar-Magnet-Magnetic-Field-With-Compass.gif"
         style="width: 100%; height: 100%; display: block; margin: 0 auto;"/>
     <div class='caption'>
         <span class='caption-label'>Figure 1.</span> Magnetic Field lines indicate which direction a north monopole will be pushed due to the magnetic field of the bar magnet (StickMan Physics).
@@ -19,7 +19,7 @@ When reading about magnetic field lines for bar magnets, you will often hear tha
 
 <div class='figure'>
     <img src="/assets/bar-magnet.gif"
-        style="width: 100%; height: 100%; display: block; margin: 0 auto;"/>
+        style="width: 50%; height: 50%; display: block; margin: 0 auto;"/>
     <div class='caption'>
         <span class='caption-label'>Figure 2.</span> Magnetic Field lines indicate which direction a north monopole will be pushed due to the magnetic field of the bar magnet (Nave).
     </div>
@@ -48,7 +48,7 @@ Note that this is equivalent to the fact that magnetic monopoles (i.e. magnets w
 Clearly, if you keep doing this recursion, you end up with a collection of ferromagnetic _units_, each of which of course has its own north and south poles.
 
 <div class='figure'>
-    <img src="/assets/ferromagnetic-bar-magnet.png"
+    <img src="/assets/ferromagnetic-bar-magnet.jpg"
         style="width: 100%; height: 100%; display: block; margin: 0 auto;"/>
     <div class='caption'>
         <span class='caption-label'>Figure 4.</span> A magnet consists of ferromagnetic sections. (Lehan, 2020)
