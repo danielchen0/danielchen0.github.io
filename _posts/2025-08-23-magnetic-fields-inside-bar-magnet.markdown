@@ -17,11 +17,20 @@ When reading about magnetic field lines for bar magnets, you will often hear tha
     </div>
 </div>
 
+
+<div class='figure'>
+    <img src="/assets/Magnet_Iron_Filings.jpg"
+        style="width: 100%; height: 100%; display: block; margin: 0 auto;"/>
+    <div class='caption'>
+        <span class='caption-label'>Figure 2.</span> You can empirically verify the existence and behavior of field lines by using iron filaments (E-TCOURSE). However, this only works for the outside of the bar magnet, as you obviously cannot place filaments inside of the bar magnet.
+    </div>
+</div>
+
 <div class='figure'>
     <img src="/assets/bar-magnet.gif"
         style="width: 50%; height: 50%; display: block; margin: 0 auto;"/>
     <div class='caption'>
-        <span class='caption-label'>Figure 2.</span> Magnetic Field lines are often shown going from north to south outside of the bar magnet, while south to north inside of the bar magnet. (Nave).
+        <span class='caption-label'>Figure 3.</span> Magnetic Field lines are often shown going from north to south outside of the bar magnet, while south to north inside of the bar magnet. (Nave).
     </div>
 </div>
 
@@ -41,7 +50,7 @@ Note that this is equivalent to the fact that magnetic monopoles (i.e. magnets w
     <img src="/assets/split-magnet.png"
         style="width: 100%; height: 100%; display: block; margin: 0 auto;"/>
     <div class='caption'>
-        <span class='caption-label'>Figure 3.</span> Splitting a North-South bar magnet just recursively produces smaller North-South bar magnets, you cannot separate the north from the south pole even if you try (Monash University).
+        <span class='caption-label'>Figure 4.</span> Splitting a North-South bar magnet just recursively produces smaller North-South bar magnets, you cannot separate the north from the south pole even if you try (Monash University).
     </div>
 </div>
 
@@ -51,7 +60,7 @@ Clearly, if you keep doing this recursion, you end up with a collection of ferro
     <img src="/assets/ferromagnetic-bar-magnet.jpg"
         style="width: 100%; height: 100%; display: block; margin: 0 auto;"/>
     <div class='caption'>
-        <span class='caption-label'>Figure 4.</span> A magnet consists of ferromagnetic sections. (Lehan, 2020)
+        <span class='caption-label'>Figure 5.</span> A magnet consists of ferromagnetic sections. (Lehan, 2020)
     </div>
 </div>
 
@@ -61,6 +70,8 @@ There is really no outside vs inside, at all points in space there are many of t
 
 
 # References
+
+E-TCOURSE. (2020, November 26). An overview of magnetic field lines and its characteristics. E-TCOURSE News Blog. Retrieved August 23, 2025, from https://www.etcourse.com/news-blog/magnetic-field-lines
 
 Lehan, D. (2020). Permanent and Induced Magnetism (4.7.1 Permanent and induced magnetism). In Physics-SchoolUK.com. Retrieved August 23, 2025, from https://physics-schooluk.com/magnetism_permanent.html
 
