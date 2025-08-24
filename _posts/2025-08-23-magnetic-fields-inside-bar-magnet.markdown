@@ -60,7 +60,7 @@ Now, intuitively, if you place a north pole somewhere in this array of north-sou
 There is really no outside vs inside, at all points in space there are many of these ferromagnetic particles acting on those points inside of the overall bar magnet. Basically, the north pole of the magnet is implied by the particles and not the otherway around - the particles imbue an overall sense of north vs southness of the bar magnet.
 
 
-# Citations
+# References
 
 Lehan, D. (2020). Permanent and Induced Magnetism (4.7.1 Permanent and induced magnetism). In Physics-SchoolUK.com. Retrieved August 23, 2025, from https://physics-schooluk.com/magnetism_permanent.html
 
