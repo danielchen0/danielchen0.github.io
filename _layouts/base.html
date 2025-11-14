@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% if page.title %}{{ page.title }} - {% endif %}Daniel Chen</title>
+    <meta charset='UTF-8'>
+    <meta content='width=device-width, initial-scale=1' name='viewport'/>
+
+    <meta name='description' content='Daniel Chen: AI Researcher'>
+    <meta name='keywords' content='{% if page.keywords %}{{ page.keywords }}{% else %}machine learning, statistical machine learning, bayesian inference, statistics, computational statistics, linear algebra, numerical linear algebra, statistical software, deep learning, computer science{% endif %}'>
+    <meta name='author' content='Daniel Chen'>
+
+    <link rel='shortcut icon' href='/favicon.png?v=e' />
+    {% if page.css %}
+        <link href='/css/{{ page.css }}.css' rel='stylesheet'/>
+    {% else %}
+        <link href='/css/blog.css' rel='stylesheet'/>
+    {% endif %}
+</head>
+<body>
+    {% include nav.html %}
+    {{ content }}
+</body>
+</html>

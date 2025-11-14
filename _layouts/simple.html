@@ -1,0 +1,13 @@
+---
+layout: base
+---
+<div id='{{ page.page_id | default: "page" }}' class='wrap'>
+    <div id='intro'>
+    </div>
+    <div id='content' class='section'>
+        {% if page.show_title != false %}
+            <h2>{{ page.title | capitalize }}</h2>
+        {% endif %}
+        {{ content }}
+    </div>
+</div>
