@@ -48,6 +48,10 @@ The cross attention mechanism is nearly identical to the self attention mechanis
 
 The math is entirely the same, the magic occurs just by the fact that we are reusing the Key and Value matrices from the Encoder and the Query matrix from the Decoder and performing this fancy rerouting.
 
+## But why?
+
+Doing this allows each decoder block to pay attention to the final encoding of the input sentence. This is useful because it allows the decoder to use the information from the input sentence to help it generate the next token, and also prevents the decoder from "forgetting" the input sentence (vanishing gradient problem).
+
 ## Conclusion
 
 That's it, that's really all there is to the Encoder-Decoder Transformer.
