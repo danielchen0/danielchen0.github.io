@@ -36,8 +36,25 @@ In words, once the encoder has processed the input sentence, the cross attention
 
 ## The Cross Attention Mechanism in Detail
 
+The cross attention mechanism is nearly identical to the self attention mechanism, the main difference now is that in Cross Attention, we port the Key and Value matrices over from the Encoder and the decoder uses its own Query matrix on these encoder matrices. This is illustrated in the diagram below:
+
+<div class='figure'>
+    <img src="/assets/self-attention-vs-cross-attention.jpeg"
+         style="width: 100%; height: 100%; display: block; margin: 0 auto;"/>
+    <div class='caption'>
+        <span class='caption-label'>Figure 3.</span> The cross attention mechanism in detail (Benveniste, 2024).
+    </div>
+</div>
+
+The math is entirely the same, the magic occurs just by the fact that we are reusing the Key and Value matrices from the Encoder and the Query matrix from the Decoder and performing this fancy rerouting.
+
+## Conclusion
+
+That's it, that's really all there is to the Encoder-Decoder Transformer.
 
 ## References
+
+Benveniste, D. (2024). What is the difference between self-attention and cross-attention? [LinkedIn post]. LinkedIn. https://www.linkedin.com/posts/damienbenveniste_what-is-the-difference-between-self-attention-activity-7211029906166624257-m0Wn/
 
 Choi, J. (2024, March 2). Where the term “cross-attention” is first used? (couldn’t find the term in Attention is all you need paper) [Question on the Data Science Stack Exchange]. Data Science Stack Exchange. https://datascience.stackexchange.com/questions/128123/where-the-term-cross-attention-is-first-used-couldnt-find-the-term-in-attention-is-all-you-need-paper
 
