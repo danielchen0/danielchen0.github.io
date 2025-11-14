@@ -1,18 +1,46 @@
 ---
-layout: page
-title: About
-permalink: /about/
+title: about
+layout: null
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+<html>
+<head>
+    <title>Daniel Chen</title>
+    <meta charset='UTF-8'>
+    <meta content='width=device-width, initial-scale=1' name='viewport'/>
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+    <meta name='description' content='Daniel Chen: AI Researcher'>
+    <!-- A decent browser will parse this fine:
+         https://webmasters.stackexchange.com/questions/92744. -->
+    <meta name='keywords' content='
+        machine learning,
+        statistical machine learning,
+        bayesian inference,
+        statistics,
+        computational statistics,
+        linear algebra,
+        numerical linear algebra,
+        statistical software,
+        deep learning,
+        computer science
+    '>
+    <meta name='author' content='Daniel Chen'>
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+    <link rel='shortcut icon' href='/favicon.png?v=e' />
+    <link href='/css/blog.css' rel='stylesheet'/>
 
-
-[jekyll-organization]: https://github.com/jekyll
+</head>
+<body>
+    {% include nav.html %}
+    <div id='about' class='wrap'>
+        <div id='intro'>
+        </div>
+        <div id='content' class='section'>
+            <h2> About </h2>
+            <p>
+                I currently work in SF as a Research Engineer at Anything. Previously, I worked at Citadel Securities in New York. I went to the University of Waterloo a long time ago.
+            </p>
+        </div>
+    </div>
+</body>
+</html> 
