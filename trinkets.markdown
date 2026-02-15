@@ -12,4 +12,5 @@ page_id: trinkets
     <li><a href='/trinkets/word-counter'>Word & Character Counter</a></li>
     <li><a href='/trinkets/json-formatter'>JSON Formatter</a></li>
     <li><a href='/trinkets/epoch-converter'>Epoch Converter</a></li>
+    <li><a href='/trinkets/xml-formatter'>XML/HTML Formatter</a></li>
 </ul>
