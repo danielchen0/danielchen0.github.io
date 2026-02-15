@@ -151,7 +151,8 @@ h1 {
 }
 #blog,
 #research,
-#about {
+#about,
+#trinkets {
   margin-top: 80px;
   margin-bottom: 100px;
 }
