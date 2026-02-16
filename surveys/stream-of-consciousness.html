@@ -17,13 +17,22 @@ page_id: surveys
 </p>
 
 <form id="survey-form">
+    <h3 style="font-size: 16px; margin-bottom: 12px;">Response</h3>
+
     <div style="margin-bottom: 16px;">
-        <label for="response" style="font-weight: bold; display: block; margin-bottom: 4px;">Your response <span style="color: red;">*</span></label>
-        <textarea id="response" rows="6" required style="width: 100%; font-family: -apple-system, Helvetica, arial, sans-serif; font-size: 14px; padding: 8px; box-sizing: border-box;"></textarea>
+        <label for="age-started" style="font-weight: bold; display: block; margin-bottom: 4px;">Age you first remember having a continuous stream of consciousness <span style="color: red;">*</span></label>
+        <input type="number" id="age-started" min="0" max="150" required style="width: 120px; font-size: 14px; padding: 8px; box-sizing: border-box;">
     </div>
 
     <div style="margin-bottom: 16px;">
-        <label for="name" style="font-weight: bold; display: block; margin-bottom: 4px;">Name <span style="font-weight: normal; color: rgba(0,0,0,0.4);">(optional)</span></label>
+        <label for="response" style="font-weight: bold; display: block; margin-bottom: 4px;">Tell us more <span style="font-weight: normal; color: rgba(0,0,0,0.4);">(optional)</span></label>
+        <textarea id="response" rows="6" style="width: 100%; font-family: -apple-system, Helvetica, arial, sans-serif; font-size: 14px; padding: 8px; box-sizing: border-box;" placeholder="Any details, memories, or context you'd like to share..."></textarea>
+    </div>
+
+    <h3 style="font-size: 16px; margin-top: 28px; margin-bottom: 12px; padding-top: 16px; border-top: 1px solid rgba(0,0,0,0.1);">About you <span style="font-weight: normal; font-size: 13px; color: rgba(0,0,0,0.4);">(all optional)</span></h3>
+
+    <div style="margin-bottom: 16px;">
+        <label for="name" style="font-weight: bold; display: block; margin-bottom: 4px;">Name</label>
         <input type="text" id="name" style="width: 100%; font-size: 14px; padding: 8px; box-sizing: border-box;">
     </div>
 
@@ -61,12 +70,14 @@ page_id: surveys
     document.getElementById('survey-form').addEventListener('submit', function (e) {
         e.preventDefault();
 
-        var responseText = document.getElementById('response').value.trim();
-        if (!responseText) {
-            document.getElementById('status').textContent = 'Please enter a response.';
+        var ageStarted = document.getElementById('age-started').value;
+        if (!ageStarted) {
+            document.getElementById('status').textContent = 'Please enter an age.';
             return;
         }
+        ageStarted = parseInt(ageStarted, 10);
 
+        var responseText = document.getElementById('response').value.trim() || null;
         var nameVal = document.getElementById('name').value.trim() || null;
         var ageVal = document.getElementById('age').value ? parseInt(document.getElementById('age').value, 10) : null;
         var locationVal = document.getElementById('location').value.trim() || null;
@@ -88,6 +99,7 @@ page_id: surveys
             },
             body: JSON.stringify({
                 survey_id: 'stream-of-consciousness',
+                age_started: ageStarted,
                 response: responseText,
                 name: nameVal,
                 age: ageVal,
