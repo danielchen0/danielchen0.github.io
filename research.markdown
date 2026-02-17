@@ -5,6 +5,10 @@ page_id: research
 ---
 
 <p>
+    <b>Chen, D.</b>, Zinn, Z., &amp; Lowe, M. (2026). <a href='https://arxiv.org/abs/2602.13889' target='_blank'>Parameter-efficient fine-tuning of DINOv2 for large-scale font classification.</a> <i>arXiv preprint arXiv:2602.13889</i>.
+</p>
+
+<p>
     Eisenmann, M., Reinke, A., Weru, V., Tizabi, M. D., Isensee, F., Adler, T. J., ... <b>Chen, D. T.</b>, ... &amp; Maier-Hein, L. (2022). <a href='https://www.researchgate.net/publication/366398025_Biomedical_image_analysis_competitions_The_state_of_current_participation_practice' target='_blank'>Biomedical image analysis competitions: The state of current participation practice.</a> <i>arXiv preprint arXiv:2212.08568</i>.
 </p>
 
