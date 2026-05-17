@@ -5,6 +5,10 @@ page_id: research
 ---
 
 <p>
+    <b>Chen, D.</b> (2026). Fluorescence distributions in combinatorial models of amyloid fibrils composed of split-YFP, Sup35p, and CFP. <i>Preprint</i>. <a href='/papers/amyloids.pdf' target='_blank'>PDF</a> &middot; <a href='https://github.com/danielchen0/amyloids' target='_blank'>Code</a>.
+</p>
+
+<p>
     <b>Chen, D.</b>, Zinn, Z., &amp; Lowe, M. (2026). <a href='https://arxiv.org/abs/2602.13889' target='_blank'>Parameter-efficient fine-tuning of DINOv2 for large-scale font classification.</a> <i>arXiv preprint arXiv:2602.13889</i>.
 </p>
 
