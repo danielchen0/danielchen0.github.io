@@ -5,6 +5,10 @@ page_id: research
 ---
 
 <p>
+    <b>Chen, D.</b> (2026). RefactorBench-JS: Evaluating LLM agents on behavior-preserving code decomposition. <i>Preprint</i>. <a href='/papers/refactorbench-js.pdf' target='_blank'>PDF</a> &middot; <a href='https://github.com/Create-Inc/refactor-bench' target='_blank'>Code and data</a>.
+</p>
+
+<p>
     <b>Chen, D.</b> (2026). Fluorescence distributions in combinatorial models of amyloid fibrils composed of split-YFP, Sup35p, and CFP. <i>Preprint</i>. <a href='/papers/amyloids.pdf' target='_blank'>PDF</a> &middot; <a href='https://github.com/danielchen0/amyloids' target='_blank'>Code</a>.
 </p>
 
