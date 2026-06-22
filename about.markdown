@@ -5,8 +5,9 @@ page_id: about
 ---
 
 <p>
-    I currently work in SF as a Research Engineer at <a href='https://www.createanything.com' target='_blank'>Anything</a>. Previously, I worked at Citadel Securities in New York. I went to the University of Waterloo a long time ago.
+    I am currently a Co-Founder of and Chief Scientist at Fabricate. Previously, I was a Researcher at Anything in SF, where I led evaluation research for our AI agents, measuring automatic refactoring correctness, merge conflict resolution, file reranking, full-stack capabilities, and design quality. I also built a classifier model for font identification. Before that, I worked on high scale systems and quantitative modelling at Citadel Securities in New York City. I went to the University of Waterloo a long time ago.
 </p>
+
 <p>
-    I am mostly interested in the *correctness* of software. At Citadel Securities, this meant building many simulation (end to end) tests, and simulation frameworks which allowed us to replay lots and lots of historical data into an application. At Anything, I've focused on building evaluations for our AI agents, measuring automatic refactoring correctness, fullstack capabilities, and design quality.
+    I am mainly interested in understanding how the world works. This usually involves the Scientific Method.
 </p>
