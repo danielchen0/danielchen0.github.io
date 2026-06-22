@@ -9,6 +9,18 @@ page_id: research
 </p>
 
 <p>
+    <b>Chen, D.</b> (2026). MergeConflictBench: Evaluating LLM agents on semantically correct merge conflict resolution. <i>Preprint</i>. <a href='https://github.com/Create-Inc/merge-conflict-bench/blob/main/paper.pdf' target='_blank'>PDF</a> &middot; <a href='https://github.com/Create-Inc/merge-conflict-bench' target='_blank'>Code and data</a>.
+</p>
+
+<p>
+    <b>Chen, D.</b> (2026). laint: Lint rules for AI agents. <i>Software</i>. <a href='https://github.com/Create-Inc/laint' target='_blank'>Code</a>.
+</p>
+
+<p>
+    Jiha, A., &amp; <b>Chen, D.</b> (2026). FileRerankingBench: A benchmark for file selection in code-editing agents. <i>Preprint</i>. <a href='https://github.com/Create-Inc/file-reranking-bench/blob/main/paper.pdf' target='_blank'>PDF</a> &middot; <a href='https://github.com/Create-Inc/file-reranking-bench' target='_blank'>Code and data</a>.
+</p>
+
+<p>
     <b>Chen, D.</b> (2026). Fluorescence distributions in combinatorial models of amyloid fibrils composed of split-YFP, Sup35p, and CFP. <i>Preprint</i>. <a href='/papers/amyloids.pdf' target='_blank'>PDF</a> &middot; <a href='https://github.com/danielchen0/amyloids' target='_blank'>Code</a>.
 </p>
 
