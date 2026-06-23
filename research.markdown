@@ -21,6 +21,10 @@ page_id: research
 </p>
 
 <p>
+    <b>Chen, D.</b> (2026). A testable prediction for anomalous consciousness research: That better-designed studies will favour the production model where proponent-cited anomalies now favour the filter model. <i>Preprint</i>. <a href='https://github.com/danielchen0/mind-body-problem/blob/main/consciousness_metaanalysis.pdf' target='_blank'>PDF</a> &middot; <a href='https://github.com/danielchen0/mind-body-problem' target='_blank'>Source</a>.
+</p>
+
+<p>
     <b>Chen, D.</b> (2026). Fluorescence distributions in combinatorial models of amyloid fibrils composed of split-YFP, Sup35p, and CFP. <i>Preprint</i>. <a href='/papers/amyloids.pdf' target='_blank'>PDF</a> &middot; <a href='https://github.com/danielchen0/amyloids' target='_blank'>Code</a>.
 </p>
 
