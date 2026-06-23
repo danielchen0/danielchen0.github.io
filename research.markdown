@@ -13,7 +13,7 @@ page_id: research
 </p>
 
 <p>
-    <b>Chen, D.</b> (2026). laint: Lint rules for AI agents. <i>Software</i>. <a href='https://github.com/Create-Inc/laint' target='_blank'>Code</a>.
+    <b>Chen, D.</b> (2026). laint: Lint rules for AI agents. <i>Preprint</i>. <a href='https://github.com/Create-Inc/laint' target='_blank'>Code</a>.
 </p>
 
 <p>
