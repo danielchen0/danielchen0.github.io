@@ -14,16 +14,10 @@ page_id: projects
     <b>JSON Deserializer.</b> <i>Project.</i> A VS Code and Cursor extension that recursively deserializes nested JSON strings into readable, formatted objects with multiline string support. <a href='https://marketplace.visualstudio.com/items?itemName=DanielChen0.json-deserializer' target='_blank'>Marketplace</a>.
 </p>
 
-<p id='surveys'>
-    <b>Stream of Consciousness Survey.</b> <i>Survey.</i> An informal academic research survey on when people first remember having a continuous stream of consciousness. <a href='/surveys/stream-of-consciousness'>Survey</a>.
+<p>
+    <b>Surveys.</b> <i>Research.</i> Informal academic research surveys with anonymous responses by default. <a href='/surveys'>Surveys</a>.
 </p>
 
-<p id='trinkets'>
-    <b>Browser Trinkets.</b> <i>Utilities.</i> Small ad-free tools that run entirely in your browser.
+<p>
+    <b>Trinkets.</b> <i>Utilities.</i> Small ad-free tools that run entirely in your browser. <a href='/trinkets'>Trinkets</a>.
 </p>
-<ul>
-    <li><a href='/trinkets/word-counter'>Word & Character Counter</a></li>
-    <li><a href='/trinkets/json-formatter'>JSON Formatter</a></li>
-    <li><a href='/trinkets/epoch-converter'>Epoch Converter</a></li>
-    <li><a href='/trinkets/xml-formatter'>XML/HTML Formatter</a></li>
-</ul>
