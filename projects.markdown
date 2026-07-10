@@ -1,8 +1,14 @@
 ---
-title: projects
+title: Projects
 layout: simple
 page_id: projects
+description: "Software projects by Daniel Chen, including Chinese Arena, JSON Deserializer, research surveys, and private browser utilities."
+schema_type: CollectionPage
 ---
+
+<p>
+    Software, research tools, and small browser utilities I have built.
+</p>
 
 <p>
     <b><a href='https://www.chinesearena.com/' target='_blank'>Chinese Arena (2026).</a></b> <i>Project.</i> Learn Chinese characters through games that practice strokes, pinyin, radicals, and visually similar characters. I built this entirely with <a href='https://anything.com' target='_blank'>Anything</a>.

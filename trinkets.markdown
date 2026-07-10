@@ -1,7 +1,9 @@
 ---
-title: trinkets
+title: Browser Utilities
 layout: simple
 page_id: trinkets
+description: "Free, ad-free browser utilities by Daniel Chen, including word counting, JSON formatting, epoch conversion, and XML formatting."
+schema_type: CollectionPage
 ---
 
 <p>

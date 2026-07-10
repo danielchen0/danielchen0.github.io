@@ -1,7 +1,9 @@
 ---
-title: surveys
+title: Research Surveys
 layout: simple
 page_id: surveys
+description: "Informal academic research surveys by Daniel Chen, with anonymous responses by default and optional demographic questions."
+schema_type: CollectionPage
 ---
 
 <p>

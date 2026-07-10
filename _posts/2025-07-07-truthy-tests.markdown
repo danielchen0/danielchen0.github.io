@@ -1,8 +1,9 @@
 ---
-title: Don't Use Truthy/Falsy values
+title: Don't Use Truthy/Falsy Values
 layout: default
 date: 2025-07-07
-keywords: transformers
+keywords: programming, truthy values, falsy values, testing
+description: "Why implicit truthy and falsy checks can obscure intent, hide type errors, and make production code harder to reason about."
 published: true
 mathjax: yes
 ---
@@ -33,13 +34,13 @@ The key of course is just that writing `!inputList` is a lot more consise than w
 
 I'll now go through a list of reasons colleagues have presented to me for why truthy falsy values are useful and evaluate their merits.
 
-# Various reasons for why Truthy Falsy checks are good
+## Various reasons for why Truthy Falsy checks are good
 
-## Avoids repetitive code for routine checks
+### Avoids repetitive code for routine checks
 
 In the example above, its useful to use the shorthand `!inputList` and anyone who is fluent in their language to take advantage of the option especially when the check comes up often. I agree with this point that if you're going to do something a lot you should have nice syntax for it, and truthy/falsy values get you that.
 
-## If it is a feature of the language you should use it
+### If it is a feature of the language you should use it
 
 I never understood this one but have heard it. It sort of assumes that every language is designed perfectly and has no pitfalls.
 
@@ -61,7 +62,7 @@ def myFunc(inputList : List[int] = None) -> None:
 ```
 
 
-## If you change the type of your variable then you don't have to update any of your checks again
+### If you change the type of your variable then you don't have to update any of your checks again
 
 I'm not sure why you would want this, the example presented to me was that converting the following from a list input to an integer input
 
@@ -86,17 +87,17 @@ There is then the added case of, if your variable name contains the type like in
 Finally, I don't think you change the type of a variable often anyways, so the whole case seems irrelevant. 
 
 
-# Various reasons for why truthy/falsy checks are bad:
+## Various reasons for why truthy/falsy checks are bad:
 
-## It violates "Write once, read many"
+### It violates "Write once, read many"
 
 Using these checks kind of reminds me of a time when programmers around me would write `alp` everywhere instead of `alpha` just to save time. This leads to the classic case that anyone reading a line in the code needs to now think about what `alp` means, similar to how ayone reading `!myList` needs to think about the False/True cases of list values when `len(myList) == 0` would have immediately told you the check condition.
 
-## No objective default across languages
+### No objective default across languages
 
 The boolean values we associate with objects and primitives are inherently arbitrary. For example, in python the empty list `[]` has boolean value `False`, but in Javascript an empty array `[]` has boolean value `true`. Therefore, there is no _intuitive_ way to know this knowledge, you just have to use it often and only in one language, and hope you don't forget that the behavior is different when switching to another language.
 
-## No objective preference across languages
+### No objective preference across languages
 
 In python, it is often recommended to use these truthy/falsy checks just as it is tacitly the preferred style in the community, as part of writing "Pythonic" code.
 
@@ -122,7 +123,7 @@ if (!ptr) {
 So we have an example where whether you should use it or not is subjective based on the community you are a part of.
 
 
-## Contradictory internal style guides
+### Contradictory internal style guides
 
 Python programmers _love_ truthy/falsy values because it makes their code so-called "pythonic".
 
@@ -138,7 +139,7 @@ Readability counts
 
 If you read these sentences, you would probably realize that truthy/falsy values violate both - implicit boolean checks are inherently not explicit, and they are harder to read if you don't know what the defaults are.
 
-## Confusing and inefficient when layered
+### Confusing and inefficient when layered
 
 In python, `None` evaluates to `False` in boolean contexts. This means that there are two cases when an `Optional[int]` evaluates to `False`: when it is `0`, and when it is `None`.
 
@@ -170,7 +171,6 @@ In this case we weren't able to use the truthy values at all. We _could_ do `!my
 
 
 
-# Conclusion
+## Conclusion
 
 In conclusion, just don't...
-

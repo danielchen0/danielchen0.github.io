@@ -2,7 +2,9 @@
 title: Why do Magnetic Field Lines go from South to North inside of a bar magnet?
 layout: default
 date: 2025-08-23
-keywords: transformers
+keywords: magnetism, magnetic fields, bar magnets, physics
+description: "A first-principles explanation of why magnetic field lines run south to north inside a bar magnet and form closed loops."
+image: /assets/Magnet_Iron_Filings.jpg
 published: true
 mathjax: yes
 ---
@@ -37,7 +39,7 @@ When reading about magnetic field lines for bar magnets, you will often hear tha
 
 Such a statement has bothered me since my youth when it was first taught to me, and even now most sources don't really do the topic justice, so I'll try my best to break this down into intuitive terms.
 
-# First principles
+## First principles
 
 To begin to understand this behavior, we need to recall some facts about bar magnets that we _can_ verify.
 
@@ -69,7 +71,7 @@ Now, intuitively, if you place a north pole somewhere in this array of north-sou
 There is really no outside vs inside, at all points in space there are many of these ferromagnetic particles acting on those points inside of the overall bar magnet. Basically, the north pole of the magnet is implied by the particles and not the otherway around - the particles imbue an overall sense of north vs southness of the bar magnet.
 
 
-# References
+## References
 
 E-TCOURSE. (2020, November 26). An overview of magnetic field lines and its characteristics. E-TCOURSE News Blog. Retrieved August 23, 2025, from https://www.etcourse.com/news-blog/magnetic-field-lines
 

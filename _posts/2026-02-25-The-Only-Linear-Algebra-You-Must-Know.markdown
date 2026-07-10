@@ -3,6 +3,7 @@ title: The Only Linear Algebra You Must Know
 layout: default
 date: 2026-02-25
 keywords: linear algebra, matrices, vector spaces, linear transformations, mathematics
+description: "A conceptual guide to linear algebra built around vector spaces, linear transformations, matrices, bases, and coordinate systems."
 published: true
 mathjax: yes
 ---
@@ -40,7 +41,7 @@ Everything else is bookkeeping.
 
 The few facts worth remembering are stated explicitly below. The proofs are short because the point is not to make the subject feel more formal. The point is to make the conceptual dependencies visible.
 
-# Vectors are not columns of numbers
+## Vectors are not columns of numbers
 
 A vector is an element of a vector space.
 
@@ -123,7 +124,7 @@ The vector is not inherently the pair of numbers `(3, 5)`. The pair of numbers i
 
 This sounds pedantic until the source of confusion becomes clear: many linear algebra mistakes come from forgetting this distinction.
 
-# Bases are coordinate systems
+## Bases are coordinate systems
 
 A basis is just a coordinate system for a vector space.
 
@@ -154,7 +155,7 @@ This map is doing something conceptually important. It takes an abstract vector 
 
 The vector space did not come with coordinates. The coordinates were added by choosing a basis.
 
-# Linear transformations are the actual objects
+## Linear transformations are the actual objects
 
 The real object in linear algebra is a linear transformation.
 
@@ -202,7 +203,7 @@ So once the values of \(T\) on the basis vectors are known, the value of \(T\) o
 
 This is the structural reason matrices exist.
 
-# What is a matrix?
+## What is a matrix?
 
 Suppose:
 
@@ -295,7 +296,7 @@ The top row is the real transformation.
 
 The bottom row is what that transformation looks like in coordinates.
 
-# Matrix multiplication is function composition
+## Matrix multiplication is function composition
 
 Matrix multiplication also becomes less arbitrary from this view.
 
@@ -361,7 +362,7 @@ means:
 
 Functions compose right-to-left, so matrices multiply right-to-left.
 
-# Why change of basis is annoying
+## Why change of basis is annoying
 
 Change of basis is another topic that becomes simpler once vectors are no longer treated as columns.
 
@@ -402,7 +403,7 @@ Likewise, two different matrices can represent the same linear transformation if
 
 This is why statements like "this matrix has eigenvalues..." are a little imprecise. The main object is the linear operator, and the matrix is one coordinate representation of it.
 
-# Why diagonalization matters
+## Why diagonalization matters
 
 Diagonalization is often taught as another algorithm:
 
@@ -438,7 +439,7 @@ That is why diagonal matrices are useful.
 
 They are not useful because zeros are aesthetically pleasing. They are useful because the transformation has been expressed in coordinates where its behavior is decoupled.
 
-# The sentence to remember
+## The sentence to remember
 
 Linear algebra is the study of linear transformations between vector spaces.
 

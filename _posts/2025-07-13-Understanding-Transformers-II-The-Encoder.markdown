@@ -3,6 +3,8 @@ title: Understanding Transformers II - The Encoder
 layout: default
 date: 2025-07-13
 keywords: transformers
+description: "A visual guide to encoder-only Transformers and BERT, covering tokenization, embeddings, attention, and classification heads."
+image: /assets/encoder-only.png
 published: true
 mathjax: yes
 ---

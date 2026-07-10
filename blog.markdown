@@ -1,11 +1,12 @@
 ---
-title: blog
+title: Blog
 layout: simple
 page_id: blog
-show_title: false
+description: "Essays by Daniel Chen about AI evaluation, transformer architectures, programming, mathematics, physics, and scientific reasoning."
+schema_type: CollectionPage
 ---
 
-<h2>Posts</h2>
+<p>Essays about AI evaluation, machine learning, programming, mathematics, physics, and scientific reasoning.</p>
 <div>
 {% for post in site.posts %}
     <div class='post-row'>
@@ -19,7 +20,7 @@ show_title: false
         </p>
     </div>
     <p class='post-subtitle'>
-        {{ post.subtitle }}
+        {{ post.description }}
     </p>
     <span class='hidden'>{{ forloop.index }}</span>
 {% endfor %}

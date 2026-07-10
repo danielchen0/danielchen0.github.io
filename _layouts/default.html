@@ -1,12 +1,9 @@
 <!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en' }}">
 <head>
-    <title>{{ page.title }}</title>
     <meta charset='UTF-8'>
     <meta content='width=device-width, initial-scale=1' name='viewport'/>
-
-    <meta name='description' content='Daniel Chen: AI Researcher'>
-    <meta name='keywords' content='{{ page.keywords }}'>
-    <meta name='author' content='Daniel Chen'>
+    {% include seo.html %}
 
     <link href='/css/blog.css' rel='stylesheet'/>
     <link href='/css/trac.css' rel='stylesheet'/>
@@ -46,4 +43,3 @@
 </div>
 </body>
 </html>
-

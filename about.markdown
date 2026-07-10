@@ -1,7 +1,9 @@
 ---
-title: about
+title: About Daniel Chen
 layout: simple
 page_id: about
+description: "Daniel Chen is an AI researcher, co-founder and Chief Scientist at Fabricate, and a former researcher at Anything and Citadel Securities."
+schema_type: ProfilePage
 ---
 
 <p>

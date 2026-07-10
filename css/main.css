@@ -23,6 +23,10 @@ h1 {
 	max-width: 700px;
 	margin: 119px auto;
 }
+#landing .tagline {
+	line-height: 1.5em;
+	margin: 0 0 20px 0;
+}
 #landing ul#links {
 	list-style-type: none;
 	padding-left: 0;

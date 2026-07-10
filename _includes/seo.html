@@ -1,0 +1,109 @@
+{% assign seo_title = page.seo_title | default: page.title | default: site.title %}
+{% assign seo_description = page.description | default: site.description | strip_html | strip_newlines | normalize_whitespace %}
+{% assign canonical_url = page.url | replace: "index.html", "" | absolute_url %}
+{% assign is_post = false %}
+{% if page.collection == "posts" %}
+  {% assign is_post = true %}
+{% endif %}
+{% if page.image %}
+  {% assign social_image = page.image | absolute_url %}
+{% endif %}
+
+<title>{% if seo_title == site.title %}{{ site.title | escape }}{% else %}{{ seo_title | escape }} - {{ site.title | escape }}{% endif %}</title>
+<meta name="description" content="{{ seo_description | escape }}">
+<meta name="author" content="{{ site.author.name | escape }}">
+{% if page.robots %}<meta name="robots" content="{{ page.robots | escape }}">{% endif %}
+<link rel="canonical" href="{{ canonical_url }}">
+<link rel="icon" href="{{ '/favicon.svg' | relative_url }}" type="image/svg+xml">
+<link rel="alternate" type="application/atom+xml" title="{{ site.title | escape }}" href="{{ '/feed.xml' | absolute_url }}">
+
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="{% if is_post %}article{% else %}website{% endif %}">
+<meta property="og:site_name" content="{{ site.title | escape }}">
+<meta property="og:title" content="{{ seo_title | escape }}">
+<meta property="og:description" content="{{ seo_description | escape }}">
+<meta property="og:url" content="{{ canonical_url }}">
+{% if social_image %}<meta property="og:image" content="{{ social_image }}">{% endif %}
+{% if is_post %}<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">{% endif %}
+
+<meta name="twitter:card" content="{% if social_image %}summary_large_image{% else %}summary{% endif %}">
+<meta name="twitter:site" content="@{{ site.twitter_username }}">
+<meta name="twitter:creator" content="@{{ site.twitter_username }}">
+<meta name="twitter:title" content="{{ seo_title | escape }}">
+<meta name="twitter:description" content="{{ seo_description | escape }}">
+{% if social_image %}<meta name="twitter:image" content="{{ social_image }}">{% endif %}
+
+{% if page.url == "/" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": {{ site.author.name | jsonify }},
+  "url": {{ site.url | jsonify }},
+  "jobTitle": "Co-Founder and Chief Scientist",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Fabricate",
+    "url": "https://fabricate.to"
+  },
+  "sameAs": {{ site.social_links | jsonify }}
+}
+</script>
+{% elsif is_post %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ page.title | jsonify }},
+  "description": {{ seo_description | jsonify }},
+  "url": {{ canonical_url | jsonify }},
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": {{ canonical_url | jsonify }}
+  },
+  "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+  "dateModified": {{ page.last_modified_at | default: page.date | date_to_xmlschema | jsonify }},
+  "author": {
+    "@type": "Person",
+    "name": {{ site.author.name | jsonify }},
+    "url": {{ site.author.url | jsonify }}
+  }{% if social_image %},
+  "image": {{ social_image | jsonify }}{% endif %}
+}
+</script>
+{% elsif page.schema_type == "ProfilePage" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "name": {{ seo_title | jsonify }},
+  "description": {{ seo_description | jsonify }},
+  "url": {{ canonical_url | jsonify }},
+  "mainEntity": {
+    "@type": "Person",
+    "name": {{ site.author.name | jsonify }},
+    "url": {{ site.author.url | jsonify }},
+    "sameAs": {{ site.social_links | jsonify }}
+  }
+}
+</script>
+{% else %}
+{% assign schema_type = page.schema_type | default: "WebPage" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": {{ schema_type | jsonify }},
+  "name": {{ seo_title | jsonify }},
+  "description": {{ seo_description | jsonify }},
+  "url": {{ canonical_url | jsonify }},
+  "author": {
+    "@type": "Person",
+    "name": {{ site.author.name | jsonify }},
+    "url": {{ site.author.url | jsonify }}
+  }{% if page.schema_type == "WebApplication" %},
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "isAccessibleForFree": true{% endif %}
+}
+</script>
+{% endif %}
