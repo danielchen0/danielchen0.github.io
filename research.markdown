@@ -11,7 +11,7 @@ schema_type: CollectionPage
 </p>
 
 <p>
-    <b>Chen, D.</b> (2026). RefactorBench-JS: Evaluating LLM agents on behavior-preserving code decomposition. <i>Preprint</i>. <a href='https://doi.org/10.5281/zenodo.22204480' target='_blank'>Zenodo</a> &middot; <a href='https://github.com/Create-Inc/refactor-bench' target='_blank'>Code and data</a>.
+    <b>Chen, D.</b> (2026). RefactorBench-JS: Evaluating LLM agents on behavior-preserving code decomposition. <i>Preprint</i>. <a href='/refactorbench/'>Visual explainer</a> &middot; <a href='https://doi.org/10.5281/zenodo.22204480' target='_blank'>Zenodo</a> &middot; <a href='https://github.com/Create-Inc/refactor-bench' target='_blank'>Code and data</a>.
 </p>
 
 <p>

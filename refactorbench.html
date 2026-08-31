@@ -1,0 +1,299 @@
+---
+title: "RefactorBench-JS: a visual guide"
+layout: base
+page_id: refactorbench
+css: refactorbench
+permalink: /refactorbench/
+description: "A visual, plain-language guide to RefactorBench-JS, a benchmark for testing whether AI coding agents can reorganize JavaScript and React code without breaking behavior."
+schema_type: Article
+---
+
+<main class="rb-page">
+  <header class="rb-hero rb-shell">
+    <div class="rb-hero-copy">
+      <p class="rb-kicker">A visual guide to RefactorBench-JS</p>
+      <h1>Can an AI split up code without quietly breaking it?</h1>
+      <p class="rb-lede">
+        Refactoring should change how code is organized—not what the software does.
+        RefactorBench-JS checks that promise by giving coding agents large JavaScript
+        and React files, then testing the behavior they were supposed to preserve.
+      </p>
+      <div class="rb-actions" aria-label="RefactorBench resources">
+        <a class="rb-button rb-button-primary" href="https://doi.org/10.5281/zenodo.22204480" target="_blank" rel="noreferrer">Read the paper</a>
+        <a class="rb-button" href="https://github.com/danielchen0/refactor-bench" target="_blank" rel="noreferrer">Explore code &amp; data</a>
+      </div>
+    </div>
+
+    <div class="rb-hero-visual" aria-label="A large code file is split into smaller files and checked by hidden tests">
+      <div class="rb-code-card rb-code-card-large">
+        <span class="rb-window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+        <strong>one-big-file.jsx</strong>
+        <span class="rb-code-line rb-line-long"></span>
+        <span class="rb-code-line rb-line-medium"></span>
+        <span class="rb-code-line rb-line-short"></span>
+        <span class="rb-code-line rb-line-long"></span>
+        <span class="rb-code-line rb-line-medium"></span>
+      </div>
+      <div class="rb-split-arrow" aria-hidden="true">→</div>
+      <div class="rb-file-stack" aria-hidden="true">
+        <div class="rb-mini-file">View.jsx</div>
+        <div class="rb-mini-file">state.js</div>
+        <div class="rb-mini-file">utils.js</div>
+      </div>
+      <div class="rb-test-stamp" aria-hidden="true">
+        <span>HIDDEN TESTS</span>
+        <strong>PASS?</strong>
+      </div>
+    </div>
+  </header>
+
+  <section class="rb-stat-strip" aria-label="Benchmark summary">
+    <div class="rb-shell rb-stat-grid">
+      <div class="rb-stat"><strong>123</strong><span>scored fixtures</span></div>
+      <div class="rb-stat"><strong>90</strong><span>web / JavaScript</span></div>
+      <div class="rb-stat"><strong>33</strong><span>React Native</span></div>
+      <div class="rb-stat"><strong>14</strong><span>model × tool conditions</span></div>
+    </div>
+  </section>
+
+  <section class="rb-section rb-shell rb-story-section">
+    <div class="rb-section-heading">
+      <p class="rb-step">01 · The basic idea</p>
+      <h2>Judge the behavior, not the makeover.</h2>
+      <p>
+        A refactor can look cleaner and still break a button, change an API response,
+        or lose saved state. RefactorBench keeps the agent away from the holdout tests,
+        then runs those tests after the work is finished.
+      </p>
+    </div>
+
+    <div class="rb-pipeline" aria-label="The four-step RefactorBench evaluation pipeline">
+      <article class="rb-pipeline-card">
+        <span class="rb-card-number">1</span>
+        <div class="rb-icon rb-icon-file" aria-hidden="true">JS</div>
+        <h3>Start with real code</h3>
+        <p>One target file, from a small algorithm to a 4,218-line application component.</p>
+      </article>
+      <span class="rb-pipeline-arrow" aria-hidden="true">→</span>
+      <article class="rb-pipeline-card">
+        <span class="rb-card-number">2</span>
+        <div class="rb-icon rb-icon-agent" aria-hidden="true">AI</div>
+        <h3>Ask an agent to split it</h3>
+        <p>The agent can create modules, move logic, and reconnect the pieces.</p>
+      </article>
+      <span class="rb-pipeline-arrow" aria-hidden="true">→</span>
+      <article class="rb-pipeline-card">
+        <span class="rb-card-number">3</span>
+        <div class="rb-icon rb-icon-lock" aria-hidden="true">•••</div>
+        <h3>Keep the test hidden</h3>
+        <p>The agent cannot optimize for the exact assertions used to grade it.</p>
+      </article>
+      <span class="rb-pipeline-arrow" aria-hidden="true">→</span>
+      <article class="rb-pipeline-card rb-pipeline-card-result">
+        <span class="rb-card-number">4</span>
+        <div class="rb-icon rb-icon-check" aria-hidden="true">✓</div>
+        <h3>Run the behavior</h3>
+        <p>Passing means the observable behavior survived the reorganization.</p>
+      </article>
+    </div>
+
+    <blockquote class="rb-principle">
+      <span>The benchmark’s rule of thumb</span>
+      “Behavioral preservation is a functional property, and functional properties are best verified by functional tests.”
+    </blockquote>
+  </section>
+
+  <section class="rb-section rb-section-tint">
+    <div class="rb-shell">
+      <div class="rb-section-heading rb-heading-row">
+        <div>
+          <p class="rb-step">02 · What gets tested</p>
+          <h2>Not just toy functions.</h2>
+        </div>
+        <p>
+          The fixtures span pure logic, data, APIs, web interfaces, and mobile apps.
+          The test changes with the kind of behavior that matters.
+        </p>
+      </div>
+
+      <div class="rb-fixture-grid">
+        <article class="rb-fixture-card">
+          <div class="rb-fixture-top"><span>01</span><strong>Algorithms</strong></div>
+          <div class="rb-mini-demo rb-algorithm-demo" aria-hidden="true">
+            <code>input</code><span>→</span><code>f(x)</code><span>→</span><code>same output</code>
+          </div>
+          <p>Edge cases, return values, and data-structure invariants must stay intact.</p>
+        </article>
+        <article class="rb-fixture-card">
+          <div class="rb-fixture-top"><span>02</span><strong>Web interfaces</strong></div>
+          <div class="rb-mini-demo rb-browser-demo" aria-hidden="true">
+            <i></i><i></i><i></i><b>register → search → chat → send</b>
+          </div>
+          <p>Rendering, events, browser storage, and multi-step user flows are exercised.</p>
+        </article>
+        <article class="rb-fixture-card">
+          <div class="rb-fixture-top"><span>03</span><strong>Mobile apps</strong></div>
+          <div class="rb-mini-demo rb-phone-demo" aria-hidden="true">
+            <span class="rb-phone"><i></i><b>tap</b><i></i></span>
+            <span>gesture → state → screen</span>
+          </div>
+          <p>Navigation, gestures, native APIs, modals, and mobile state flows are checked.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="rb-section rb-shell">
+    <div class="rb-section-heading rb-heading-row">
+      <div>
+        <p class="rb-step">03 · Baseline results</p>
+        <h2>A test tool helps—but not every model.</h2>
+      </div>
+      <p>
+        Seven model configurations attempted the same 123 fixtures, once with a unit-test
+        runner available and once without it. Toggle the chart to compare them.
+      </p>
+    </div>
+
+    <div class="rb-chart-card">
+      <div class="rb-chart-toolbar">
+        <div class="rb-segmented" role="group" aria-label="Select test runner condition">
+          <button class="is-active" type="button" data-chart-mode="enabled" aria-pressed="true">Test runner on</button>
+          <button type="button" data-chart-mode="disabled" aria-pressed="false">Test runner off</button>
+        </div>
+        <p id="rb-chart-summary" aria-live="polite">Best result: Gemini 3.0 Pro at 25.2%</p>
+      </div>
+
+      <div class="rb-bars" id="rb-model-chart">
+        <div class="rb-bar-row" data-enabled="23.6" data-disabled="13.8"><span>Sonnet 4.6</span><div class="rb-bar-track"><i style="--bar: 78.7%"></i></div><strong>23.6%</strong></div>
+        <div class="rb-bar-row" data-enabled="22.8" data-disabled="17.1"><span>Opus 4.6</span><div class="rb-bar-track"><i style="--bar: 76%"></i></div><strong>22.8%</strong></div>
+        <div class="rb-bar-row" data-enabled="13.8" data-disabled="13.0"><span>Opus 4.7</span><div class="rb-bar-track"><i style="--bar: 46%"></i></div><strong>13.8%</strong></div>
+        <div class="rb-bar-row" data-enabled="10.6" data-disabled="13.0"><span>Gemini 2.0 Flash</span><div class="rb-bar-track"><i style="--bar: 35.3%"></i></div><strong>10.6%</strong></div>
+        <div class="rb-bar-row" data-enabled="14.6" data-disabled="12.2"><span>Gemini 2.5 Flash</span><div class="rb-bar-track"><i style="--bar: 48.7%"></i></div><strong>14.6%</strong></div>
+        <div class="rb-bar-row" data-enabled="17.1" data-disabled="17.9"><span>Gemini 2.5 Pro</span><div class="rb-bar-track"><i style="--bar: 57%"></i></div><strong>17.1%</strong></div>
+        <div class="rb-bar-row" data-enabled="25.2" data-disabled="17.9"><span>Gemini 3.0 Pro</span><div class="rb-bar-track"><i style="--bar: 84%"></i></div><strong>25.2%</strong></div>
+      </div>
+
+      <div class="rb-axis" aria-hidden="true"><span>0%</span><span>10%</span><span>20%</span><span>30%</span></div>
+      <p class="rb-chart-note">Hidden-test pass rate. Every model/tool condition used the same 123 fixtures.</p>
+    </div>
+
+    <div class="rb-findings-grid">
+      <article class="rb-finding rb-finding-coral">
+        <span class="rb-finding-label">Largest tool lift</span>
+        <strong>+9.8 points</strong>
+        <p>Sonnet 4.6 passed 29 fixtures with the runner and 17 without it.</p>
+      </article>
+      <article class="rb-finding rb-finding-blue">
+        <span class="rb-finding-label">Not a universal win</span>
+        <strong>2 of 7</strong>
+        <p>Two models scored slightly lower with the test runner available.</p>
+      </article>
+      <article class="rb-finding rb-finding-dark">
+        <span class="rb-finding-label">Hardest tier</span>
+        <strong>86 fixtures</strong>
+        <p>Failed in all 14 baseline conditions; large UI files dominated this group.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="rb-section rb-section-dark">
+    <div class="rb-shell">
+      <div class="rb-section-heading rb-heading-row">
+        <div>
+          <p class="rb-step">04 · The trust gap</p>
+          <h2>“Done” is not the same as correct.</h2>
+        </div>
+        <p>
+          In the highest-scoring baseline condition, the agent reported success far more
+          often than the hidden tests confirmed preserved behavior.
+        </p>
+      </div>
+
+      <div class="rb-trust-grid">
+        <div class="rb-gauge-card">
+          <div class="rb-gauge rb-gauge-reported" style="--value: 79.7%"><span>98<small>/ 123</small></span></div>
+          <h3>Agent said “success”</h3>
+          <p>Gemini 3.0 Pro with the test runner enabled.</p>
+        </div>
+        <div class="rb-not-equal" aria-hidden="true">≠</div>
+        <div class="rb-gauge-card">
+          <div class="rb-gauge rb-gauge-verified" style="--value: 25.2%"><span>31<small>/ 123</small></span></div>
+          <h3>Hidden tests passed</h3>
+          <p>The external behavioral check tells a different story.</p>
+        </div>
+      </div>
+
+      <div class="rb-trust-caption">
+        <strong>68 false-confidence failures</strong>
+        <p>The agent reported success, but the hidden tests still found broken behavior.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="rb-section rb-shell">
+    <div class="rb-section-heading rb-heading-row">
+      <div>
+        <p class="rb-step">05 · Where attempts failed</p>
+        <h2>Most failures were basic, not mysterious.</h2>
+      </div>
+      <p>
+        Across 1,436 failed outcomes, incomplete attempts, syntax errors, and broken module
+        boundaries explained more than nine out of ten failures.
+      </p>
+    </div>
+
+    <div class="rb-failure-visual">
+      <div class="rb-failure-stack" role="img" aria-label="Failure shares: reported non-success 47.9%, syntax or parse failure 29.4%, module import or export failure 15.3%, all other failures 7.4%">
+        <span class="rb-fail-non-success" style="--share: 47.9%"></span>
+        <span class="rb-fail-syntax" style="--share: 29.4%"></span>
+        <span class="rb-fail-import" style="--share: 15.3%"></span>
+        <span class="rb-fail-other" style="--share: 7.4%"></span>
+      </div>
+      <div class="rb-failure-legend">
+        <div><i class="rb-swatch rb-swatch-coral"></i><span>Reported non-success</span><strong>47.9%</strong></div>
+        <div><i class="rb-swatch rb-swatch-yellow"></i><span>Syntax / parse</span><strong>29.4%</strong></div>
+        <div><i class="rb-swatch rb-swatch-blue"></i><span>Import / export</span><strong>15.3%</strong></div>
+        <div><i class="rb-swatch rb-swatch-gray"></i><span>Everything else</span><strong>7.4%</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="rb-section rb-section-tint">
+    <div class="rb-shell rb-bottom-grid">
+      <div>
+        <p class="rb-step">06 · What it means</p>
+        <h2>The model is only half the system.</h2>
+        <p class="rb-bottom-lede">
+          A coding agent also depends on its tools, its stopping behavior, and the external
+          checks around it. RefactorBench makes those differences measurable instead of
+          trusting a clean-looking diff or a confident completion message.
+        </p>
+      </div>
+      <div class="rb-takeaways">
+        <article><span>1</span><p><strong>Run the code.</strong> Compilation and visual cleanliness cannot prove behavior survived.</p></article>
+        <article><span>2</span><p><strong>Evaluate model + tools together.</strong> The same tool can help one model and fail to help another.</p></article>
+        <article><span>3</span><p><strong>Measure calibration.</strong> An agent that knows when it failed is safer than one that breaks things confidently.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <footer class="rb-footer rb-shell">
+    <div>
+      <p class="rb-kicker">Go deeper</p>
+      <h2>Read, inspect, or run the benchmark.</h2>
+    </div>
+    <div class="rb-footer-links">
+      <a href="https://doi.org/10.5281/zenodo.22204480" target="_blank" rel="noreferrer"><span>Paper</span><strong>Zenodo DOI ↗</strong></a>
+      <a href="https://github.com/danielchen0/refactor-bench" target="_blank" rel="noreferrer"><span>Benchmark</span><strong>Code &amp; data ↗</strong></a>
+      <a href="/research"><span>More work</span><strong>Research page →</strong></a>
+    </div>
+    <p class="rb-method-note">
+      Figures on this page summarize the released full-run baseline. “Hidden” means hidden
+      from the agent during evaluation; the tests are public after release for auditability.
+      Baselines depend on the recorded model snapshots, harness, prompts, retries, and runtime.
+    </p>
+  </footer>
+</main>
+
+<script src="/assets/refactorbench.js" defer></script>
