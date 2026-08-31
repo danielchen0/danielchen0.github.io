@@ -7,27 +7,11 @@ schema_type: CollectionPage
 ---
 
 <p>
-    Publications and preprints on AI agent evaluation, code benchmarks, computer vision, biomedical imaging, and scientific modeling.
+    Publications and archived preprints on AI agent evaluation, code benchmarks, computer vision, biomedical imaging, and scientific modeling.
 </p>
 
 <p>
     <b>Chen, D.</b> (2026). RefactorBench-JS: Evaluating LLM agents on behavior-preserving code decomposition. <i>Preprint</i>. <a href='/refactorbench/'>Visual explainer</a> &middot; <a href='https://doi.org/10.5281/zenodo.22204480' target='_blank'>Zenodo</a> &middot; <a href='https://github.com/Create-Inc/refactor-bench' target='_blank'>Code and data</a>.
-</p>
-
-<p>
-    <b>Chen, D.</b> (2026). MergeConflictBench: Evaluating LLM agents on semantically correct merge conflict resolution. <i>Preprint</i>. <a href='https://github.com/Create-Inc/merge-conflict-bench/blob/main/paper.pdf' target='_blank'>PDF</a> &middot; <a href='https://github.com/Create-Inc/merge-conflict-bench' target='_blank'>Code and data</a>.
-</p>
-
-<p>
-    <b>Chen, D.</b>, &amp; Surve, A. (2026). laint: Lint rules for AI agents. <i>Preprint</i>. <a href='/papers/laint.pdf' target='_blank'>PDF</a> &middot; <a href='https://github.com/Create-Inc/laint' target='_blank'>Code and data</a>.
-</p>
-
-<p>
-    Jiha, A., &amp; <b>Chen, D.</b> (2026). FileRerankingBench: A benchmark for file selection in code-editing agents. <i>Preprint</i>. <a href='https://github.com/Create-Inc/file-reranking-bench/blob/main/paper.pdf' target='_blank'>PDF</a> &middot; <a href='https://github.com/Create-Inc/file-reranking-bench' target='_blank'>Code and data</a>.
-</p>
-
-<p>
-    <b>Chen, D.</b> (2026). A testable prediction for anomalous consciousness research: That better-designed studies will favour the production model where proponent-cited anomalies now favour the filter model. <i>Preprint</i>. <a href='https://github.com/danielchen0/mind-body-problem/blob/main/consciousness_metaanalysis.pdf' target='_blank'>PDF</a> &middot; <a href='https://github.com/danielchen0/mind-body-problem' target='_blank'>Source</a>.
 </p>
 
 <p>
@@ -44,4 +28,26 @@ schema_type: CollectionPage
 
 <p>
     <b>Chen, D. T.</b>, Chen, A. T., &amp; Wang, H. (2022). <a href='https://www.researchgate.net/publication/362169251_Simple_and_Fast_Convolutional_Neural_Network_Applied_to_Median_Cross_Sections_for_Predicting_the_Presence_of_MGMT_Promoter_Methylation_in_FLAIR_MRI_Scans' target='_blank'>Simple and fast convolutional neural network applied to median cross sections for predicting the presence of MGMT promoter methylation in FLAIR MRI scans.</a> In <i>Brainlesion: Glioma, Multiple Sclerosis, Stroke and Traumatic Brain Injuries (BrainLes 2021)</i>, Lecture Notes in Computer Science (Vol. 12962). Springer.
+</p>
+
+<h2>In Progress</h2>
+
+<p>
+    Working manuscripts not yet archived as preprints.
+</p>
+
+<p>
+    <b>Chen, D.</b> (2026). MergeConflictBench: Evaluating LLM agents on semantically correct merge conflict resolution. <i>In progress</i>. <a href='https://github.com/Create-Inc/merge-conflict-bench/blob/main/paper.pdf' target='_blank'>PDF</a> &middot; <a href='https://github.com/Create-Inc/merge-conflict-bench' target='_blank'>Code and data</a>.
+</p>
+
+<p>
+    <b>Chen, D.</b>, &amp; Surve, A. (2026). laint: Lint rules for AI agents. <i>In progress</i>. <a href='/papers/laint.pdf' target='_blank'>PDF</a> &middot; <a href='https://github.com/Create-Inc/laint' target='_blank'>Code and data</a>.
+</p>
+
+<p>
+    Jiha, A., &amp; <b>Chen, D.</b> (2026). FileRerankingBench: A benchmark for file selection in code-editing agents. <i>In progress</i>. <a href='https://github.com/Create-Inc/file-reranking-bench/blob/main/paper.pdf' target='_blank'>PDF</a> &middot; <a href='https://github.com/Create-Inc/file-reranking-bench' target='_blank'>Code and data</a>.
+</p>
+
+<p>
+    <b>Chen, D.</b> (2026). A testable prediction for anomalous consciousness research: That better-designed studies will favour the production model where proponent-cited anomalies now favour the filter model. <i>In progress</i>. <a href='https://github.com/danielchen0/mind-body-problem/blob/main/consciousness_metaanalysis.pdf' target='_blank'>PDF</a> &middot; <a href='https://github.com/danielchen0/mind-body-problem' target='_blank'>Source</a>.
 </p>
