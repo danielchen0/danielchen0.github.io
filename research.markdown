@@ -19,7 +19,7 @@ schema_type: CollectionPage
 </p>
 
 <p>
-    <b>Chen, D.</b> (2026). laint: Lint rules for AI agents. <i>Preprint</i>. <a href='/papers/laint.pdf' target='_blank'>PDF</a> &middot; <a href='https://github.com/Create-Inc/laint' target='_blank'>Code and data</a>.
+    <b>Chen, D.</b>, &amp; Surve, A. (2026). laint: Lint rules for AI agents. <i>Preprint</i>. <a href='/papers/laint.pdf' target='_blank'>PDF</a> &middot; <a href='https://github.com/Create-Inc/laint' target='_blank'>Code and data</a>.
 </p>
 
 <p>
