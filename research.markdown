@@ -31,7 +31,7 @@ schema_type: CollectionPage
 </p>
 
 <p>
-    <b>Chen, D.</b> (2026). Fluorescence distributions in combinatorial models of amyloid fibrils composed of split-YFP, Sup35p, and CFP. <i>Preprint</i>. <a href='/papers/amyloids.pdf' target='_blank'>PDF</a> &middot; <a href='https://github.com/danielchen0/amyloids' target='_blank'>Code</a>.
+    <b>Chen, D.</b> (2026). Fluorescence distributions in combinatorial models of amyloid fibrils composed of split-YFP, Sup35p, and CFP. <i>Preprint</i>. <a href='https://doi.org/10.5281/zenodo.22209597' target='_blank'>Zenodo</a> &middot; <a href='https://github.com/danielchen0/amyloids' target='_blank'>Code</a>.
 </p>
 
 <p>
