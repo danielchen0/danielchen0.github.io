@@ -27,7 +27,7 @@ schema_type: CollectionPage
 </p>
 
 <p>
-    <b>Chen, D. T.</b>, Chen, A. T., &amp; Wang, H. (2022). <a href='https://www.researchgate.net/publication/362169251_Simple_and_Fast_Convolutional_Neural_Network_Applied_to_Median_Cross_Sections_for_Predicting_the_Presence_of_MGMT_Promoter_Methylation_in_FLAIR_MRI_Scans' target='_blank'>Simple and fast convolutional neural network applied to median cross sections for predicting the presence of MGMT promoter methylation in FLAIR MRI scans.</a> In <i>Brainlesion: Glioma, Multiple Sclerosis, Stroke and Traumatic Brain Injuries (BrainLes 2021)</i>, Lecture Notes in Computer Science (Vol. 12962). Springer.
+    <b>Chen, D. T.</b>, Chen, A. T., &amp; Wang, H. (2022). <a href='https://www.researchgate.net/publication/362169251_Simple_and_Fast_Convolutional_Neural_Network_Applied_to_Median_Cross_Sections_for_Predicting_the_Presence_of_MGMT_Promoter_Methylation_in_FLAIR_MRI_Scans' target='_blank'>Simple and fast convolutional neural network applied to median cross sections for predicting the presence of MGMT promoter methylation in FLAIR MRI scans.</a> In <i>Brainlesion: Glioma, Multiple Sclerosis, Stroke and Traumatic Brain Injuries (BrainLes 2021)</i>, Lecture Notes in Computer Science (Vol. 12962). Springer. Presented at the <a href='https://www.miccai2021.org/en/MICCAI2021-WORKSHOPS.html' target='_blank'>BrainLes workshop at MICCAI 2021</a>. <a href='/papers/mgmt-cnn-slides.pdf' target='_blank'>Slides</a> &middot; <a href='/papers/mgmt-cnn-presentation.mp4' target='_blank'>Presentation video</a>.
 </p>
 
 <h2>In Progress</h2>
