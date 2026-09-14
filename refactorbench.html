@@ -1,6 +1,7 @@
 ---
 title: "RefactorBench-JS: a visual guide"
 layout: base
+base_css: blog
 page_id: refactorbench
 css: refactorbench
 permalink: /refactorbench/
@@ -11,8 +12,9 @@ schema_type: Article
 <main class="rb-page">
   <header class="rb-hero rb-shell">
     <div class="rb-hero-copy">
-      <p class="rb-kicker">A visual guide to RefactorBench-JS</p>
-      <h1>Can an AI split up code without quietly breaking it?</h1>
+      <p class="rb-kicker">Behavioral refactoring benchmark · visual guide</p>
+      <h1>RefactorBench—JS</h1>
+      <p class="rb-deck">Can an AI split up code without quietly breaking it?</p>
       <p class="rb-lede">
         Refactoring should change how code is organized—not what the software does.
         RefactorBench-JS checks that promise by giving coding agents large JavaScript
@@ -26,6 +28,7 @@ schema_type: Article
 
     <div class="rb-hero-visual" aria-label="A large code file is split into smaller files and checked by hidden tests">
       <div class="rb-code-card rb-code-card-large">
+        <small>Input / monolith</small>
         <span class="rb-window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
         <strong>one-big-file.jsx</strong>
         <span class="rb-code-line rb-line-long"></span>
@@ -36,13 +39,14 @@ schema_type: Article
       </div>
       <div class="rb-split-arrow" aria-hidden="true">→</div>
       <div class="rb-file-stack" aria-hidden="true">
+        <small>Output / modules</small>
         <div class="rb-mini-file">View.jsx</div>
         <div class="rb-mini-file">state.js</div>
         <div class="rb-mini-file">utils.js</div>
       </div>
       <div class="rb-test-stamp" aria-hidden="true">
-        <span>HIDDEN TESTS</span>
-        <strong>PASS?</strong>
+        <span>04 / VERIFY</span>
+        <strong>Hidden tests</strong>
       </div>
     </div>
   </header>
@@ -163,6 +167,8 @@ schema_type: Article
         </div>
         <p id="rb-chart-summary" aria-live="polite">Best result: Gemini 3.0 Pro at 25.2%</p>
       </div>
+
+      <div class="rb-chart-key" aria-hidden="true"><span></span>Hidden-test pass rate / 123 fixtures</div>
 
       <div class="rb-bars" id="rb-model-chart">
         <div class="rb-bar-row" data-enabled="23.6" data-disabled="13.8"><span>Sonnet 4.6</span><div class="rb-bar-track"><i style="--bar: 78.7%"></i></div><strong>23.6%</strong></div>

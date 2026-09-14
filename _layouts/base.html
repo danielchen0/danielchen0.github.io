@@ -6,6 +6,9 @@
     {% include seo.html %}
 
     {% if page.css %}
+        {% if page.base_css %}
+            <link href='/css/{{ page.base_css }}.css' rel='stylesheet'/>
+        {% endif %}
         <link href='/css/{{ page.css }}.css' rel='stylesheet'/>
     {% else %}
         <link href='/css/blog.css' rel='stylesheet'/>
