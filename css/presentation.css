@@ -1,0 +1,64 @@
+#presentation {
+  max-width: 1080px;
+  margin-top: 40px;
+  margin-bottom: 100px;
+}
+.presentation-viewer {
+  margin-top: 24px;
+}
+.presentation-toolbar {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+.presentation-toolbar a {
+  font-size: 13px;
+}
+.presentation-controls {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+}
+.presentation-controls button {
+  background: #f7f7f7;
+  border: 1px solid rgba(0, 0, 0, 0.22);
+  border-radius: 3px;
+  color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  font: inherit;
+  padding: 5px 10px;
+}
+.presentation-controls button:disabled {
+  color: rgba(0, 0, 0, 0.35);
+  cursor: default;
+}
+.presentation-counter {
+  min-width: 56px;
+  text-align: center;
+}
+.presentation-stage {
+  margin: 0;
+}
+.presentation-stage img {
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  border-radius: 3px;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+}
+.presentation-hint {
+  color: rgba(0, 0, 0, 0.55);
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 700px) {
+  .presentation-toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
