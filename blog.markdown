@@ -22,6 +22,14 @@ schema_type: CollectionPage
     <p class='post-subtitle'>
         {{ post.description }}
     </p>
+    {% assign preview_image = post.preview_image | default: post.image %}
+    {% if preview_image %}
+    <div class='entry-preview blog-preview' aria-label='{{ post.title }} preview'>
+        <a href="{{ post.url }}">
+            <img src='{{ preview_image }}' alt='{{ post.title }} preview'>
+        </a>
+    </div>
+    {% endif %}
     <span class='hidden'>{{ forloop.index }}</span>
 {% endfor %}
 </div>

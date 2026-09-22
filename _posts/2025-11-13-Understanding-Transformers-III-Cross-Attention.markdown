@@ -5,6 +5,7 @@ date: 2025-11-13
 keywords: transformers
 description: "A visual explanation of cross-attention and how it connects encoder and decoder stacks in the original Transformer architecture."
 image: /assets/transformer-with-labels.png
+preview_image: /assets/self-attention-vs-cross-attention.jpeg
 published: true
 mathjax: yes
 ---

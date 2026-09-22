@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-label="Agent evaluation workflow diagram">
+  <rect width="960" height="540" fill="#fbfbfb"/>
+  <rect x="72" y="64" width="816" height="412" rx="10" fill="#ffffff" stroke="#d8d8d8"/>
+  <text x="96" y="116" font-family="-apple-system, Helvetica, Arial, sans-serif" font-size="34" font-weight="700" fill="#222">Agent evaluations</text>
+  <text x="96" y="152" font-family="-apple-system, Helvetica, Arial, sans-serif" font-size="18" fill="#555">Measure whether app-building agents actually improve.</text>
+  <g font-family="-apple-system, Helvetica, Arial, sans-serif">
+    <g transform="translate(100 226)">
+      <rect width="150" height="92" rx="8" fill="#eef4ff" stroke="#b8c8e6"/>
+      <text x="24" y="40" font-size="20" font-weight="700" fill="#28446f">Prompt</text>
+      <text x="24" y="66" font-size="15" fill="#456">real tasks</text>
+    </g>
+    <g transform="translate(310 226)">
+      <rect width="150" height="92" rx="8" fill="#fff4e8" stroke="#e8c9a7"/>
+      <text x="24" y="40" font-size="20" font-weight="700" fill="#764a19">Agent</text>
+      <text x="24" y="66" font-size="15" fill="#654">builds app</text>
+    </g>
+    <g transform="translate(520 226)">
+      <rect width="150" height="92" rx="8" fill="#eef9f2" stroke="#b9d8c2"/>
+      <text x="24" y="40" font-size="20" font-weight="700" fill="#28633b">Browser</text>
+      <text x="24" y="66" font-size="15" fill="#465">tests flows</text>
+    </g>
+    <g transform="translate(730 226)">
+      <rect width="118" height="92" rx="8" fill="#f8eef9" stroke="#d6badb"/>
+      <text x="22" y="40" font-size="20" font-weight="700" fill="#67316e">Score</text>
+      <text x="22" y="66" font-size="15" fill="#645">track drift</text>
+    </g>
+    <path d="M260 272 H300" stroke="#777" stroke-width="3" marker-end="url(#arrow)"/>
+    <path d="M470 272 H510" stroke="#777" stroke-width="3" marker-end="url(#arrow)"/>
+    <path d="M680 272 H720" stroke="#777" stroke-width="3" marker-end="url(#arrow)"/>
+  </g>
+  <rect x="100" y="382" width="748" height="42" rx="6" fill="#f5f5f5" stroke="#e4e4e4"/>
+  <text x="124" y="409" font-family="-apple-system, Helvetica, Arial, sans-serif" font-size="18" fill="#333">Meaningful evals combine automated checks with human review.</text>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#777"/>
+    </marker>
+  </defs>
+</svg>

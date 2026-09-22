@@ -5,6 +5,7 @@ date: 2025-05-31
 keywords: transformers
 description: "A visual and intuitive introduction to decoder-only Transformer architecture, including embeddings, attention, and language modeling."
 image: /assets/decoder-only.png
+preview_image: /assets/decoder-only.png
 published: true
 mathjax: yes
 ---

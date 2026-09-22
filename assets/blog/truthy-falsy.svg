@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-label="Truthy and falsy code comparison">
+  <rect width="960" height="540" fill="#fbfbfb"/>
+  <text x="72" y="92" font-family="-apple-system, Helvetica, Arial, sans-serif" font-size="34" font-weight="700" fill="#222">Truthy / falsy checks hide intent</text>
+  <g font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="24">
+    <rect x="72" y="148" width="380" height="246" rx="10" fill="#fff6f6" stroke="#e1b7b7"/>
+    <text x="102" y="198" fill="#8a2d2d">if not value:</text>
+    <text x="126" y="238" fill="#333">return fallback</text>
+    <text x="102" y="310" fill="#8a2d2d">0 == [] == "" ?</text>
+    <text x="102" y="350" fill="#555">ambiguous</text>
+    <rect x="508" y="148" width="380" height="246" rx="10" fill="#f2fbf5" stroke="#b6d6c0"/>
+    <text x="538" y="198" fill="#25633a">if value is None:</text>
+    <text x="562" y="238" fill="#333">return fallback</text>
+    <text x="538" y="310" fill="#25633a">len(items) == 0</text>
+    <text x="538" y="350" fill="#555">explicit</text>
+  </g>
+  <text x="72" y="456" font-family="-apple-system, Helvetica, Arial, sans-serif" font-size="20" fill="#444">Prefer checks that say exactly what condition matters.</text>
+</svg>

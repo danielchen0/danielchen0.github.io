@@ -5,6 +5,7 @@ date: 2025-08-23
 keywords: magnetism, magnetic fields, bar magnets, physics
 description: "A first-principles explanation of why magnetic field lines run south to north inside a bar magnet and form closed loops."
 image: /assets/Magnet_Iron_Filings.jpg
+preview_image: /assets/Magnet_Iron_Filings.jpg
 published: true
 mathjax: yes
 ---

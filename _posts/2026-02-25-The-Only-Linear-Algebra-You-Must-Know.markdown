@@ -4,6 +4,7 @@ layout: default
 date: 2026-02-25
 keywords: linear algebra, matrices, vector spaces, linear transformations, mathematics
 description: "A conceptual guide to linear algebra built around vector spaces, linear transformations, matrices, bases, and coordinate systems."
+preview_image: /assets/blog/linear-algebra.svg
 published: true
 mathjax: yes
 ---

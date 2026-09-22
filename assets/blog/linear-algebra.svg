@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-label="Linear algebra transformation diagram">
+  <rect width="960" height="540" fill="#fbfbfb"/>
+  <text x="72" y="94" font-family="-apple-system, Helvetica, Arial, sans-serif" font-size="36" font-weight="700" fill="#222">A matrix describes a transformation</text>
+  <g stroke="#d7d7d7" stroke-width="1">
+    <path d="M120 160 H380 M120 210 H380 M120 260 H380 M120 310 H380 M120 360 H380"/>
+    <path d="M170 130 V390 M220 130 V390 M270 130 V390 M320 130 V390"/>
+    <path d="M580 160 H840 M580 210 H840 M580 260 H840 M580 310 H840 M580 360 H840"/>
+    <path d="M630 130 V390 M680 130 V390 M730 130 V390 M780 130 V390"/>
+  </g>
+  <g stroke="#222" stroke-width="3" marker-end="url(#arrow)">
+    <path d="M250 260 L340 184"/>
+    <path d="M250 260 L176 344"/>
+    <path d="M710 260 L828 220"/>
+    <path d="M710 260 L632 330"/>
+  </g>
+  <path d="M428 260 H532" stroke="#555" stroke-width="4" marker-end="url(#arrow)"/>
+  <text x="453" y="238" font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="30" fill="#333">A</text>
+  <text x="150" y="430" font-family="-apple-system, Helvetica, Arial, sans-serif" font-size="20" fill="#555">same vector space</text>
+  <text x="615" y="430" font-family="-apple-system, Helvetica, Arial, sans-serif" font-size="20" fill="#555">new coordinates</text>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#222"/>
+    </marker>
+  </defs>
+</svg>
