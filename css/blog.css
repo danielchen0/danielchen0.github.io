@@ -161,16 +161,26 @@ h1 {
 .presentation-entry {
   margin-bottom: 30px;
 }
+.project-entry,
+.research-entry {
+  margin-bottom: 28px;
+}
+.entry-preview,
 .presentation-preview {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
   gap: 10px;
   margin: 10px 0 6px 0;
 }
+.entry-preview {
+  grid-template-columns: repeat(auto-fit, minmax(160px, 220px));
+}
+.entry-preview a,
 .presentation-preview a {
   display: block;
   border-bottom: none;
 }
+.entry-preview img,
 .presentation-preview img {
   display: block;
   width: 100%;
