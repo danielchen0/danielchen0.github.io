@@ -183,6 +183,33 @@ h1 {
   margin-bottom: 100px;
 }
 
+.presentation-entry {
+  margin-bottom: 30px;
+}
+.presentation-preview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+  gap: 10px;
+  margin: 10px 0 6px 0;
+}
+.presentation-preview a {
+  display: block;
+  border-bottom: none;
+}
+.presentation-preview img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 3px;
+}
+.presentation-links {
+  font-size: 13px;
+  margin-top: 0;
+}
+
 #blog {
   margin-top: 80px;
   margin-bottom: 100px;
