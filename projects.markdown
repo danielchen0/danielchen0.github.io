@@ -25,3 +25,13 @@ schema_type: CollectionPage
 <p>
     <b><a href='/trinkets'>Trinkets (2026).</a></b> <i>Utilities.</i> Small ad-free tools that run entirely in your browser.
 </p>
+
+<h2>Presentations</h2>
+
+<p>
+    <b><a href='https://github.com/danielchen0/webookclub_presentation_2026' target='_blank'>Using AI Agents (2026).</a></b> <i>Slides.</i> A layperson-friendly presentation on what AI agents are, practical ways to use them, agent safety, evaluations, and examples from everyday tools.
+</p>
+
+<p>
+    <b><a href='https://github.com/danielchen0/proompting_presentation_2026' target='_blank'>Proompting (2026).</a></b> <i>Slides.</i> A presentation deck on prompting.
+</p>
