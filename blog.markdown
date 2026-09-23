@@ -7,7 +7,6 @@ schema_type: CollectionPage
 ---
 
 <p>Essays about AI evaluation, machine learning, programming, mathematics, physics, and scientific reasoning.</p>
-<div>
 {% for post in site.posts %}
 <div class='post-row'>
     <p class='post-title'>
@@ -32,4 +31,3 @@ schema_type: CollectionPage
 {% endif %}
 <span class='hidden'>{{ forloop.index }}</span>
 {% endfor %}
-</div>
