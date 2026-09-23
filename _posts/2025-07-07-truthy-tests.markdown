@@ -4,7 +4,7 @@ layout: default
 date: 2025-07-07
 keywords: programming, truthy values, falsy values, testing
 description: "Why implicit truthy and falsy checks can obscure intent, hide type errors, and make production code harder to reason about."
-preview_image: /assets/blog/truthy-falsy.svg
+preview_image: /assets/blog/truthy-falsy.png
 published: true
 mathjax: yes
 ---

@@ -4,7 +4,7 @@ layout: default
 date: 2025-05-17
 keywords: evals
 description: "How to build meaningful evaluations for AI app-building agents using prompt sets, code-based scorers, and automated analysis."
-preview_image: /assets/blog/agentic-evals.svg
+preview_image: /assets/blog/agentic-evals.png
 published: true
 mathjax: yes
 ---

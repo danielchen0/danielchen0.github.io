@@ -5,6 +5,7 @@ page_id: blog
 permalink: /blog/
 description: "Essays by Daniel Chen about AI evaluation, transformer architectures, programming, mathematics, physics, and scientific reasoning."
 schema_type: CollectionPage
+image: /assets/blog/agentic-evals.png
 ---
 
 <p>Essays about AI evaluation, machine learning, programming, mathematics, physics, and scientific reasoning.</p>
@@ -26,7 +27,7 @@ schema_type: CollectionPage
 {% if preview_image %}
 <div class='entry-preview blog-preview' aria-label='{{ post.title }} preview'>
     <a href="{{ post.url }}">
-        <img src='{{ preview_image }}' alt='{{ post.title }} preview'>
+        <img src='{{ preview_image }}' alt='{{ post.title }} preview' loading='lazy' decoding='async' width='960' height='540'>
     </a>
 </div>
 {% endif %}

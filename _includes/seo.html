@@ -5,8 +5,9 @@
 {% if page.collection == "posts" %}
   {% assign is_post = true %}
 {% endif %}
-{% if page.image %}
-  {% assign social_image = page.image | absolute_url %}
+{% assign page_social_image = page.image | default: page.preview_image %}
+{% if page_social_image %}
+  {% assign social_image = page_social_image | absolute_url %}
 {% endif %}
 
 <title>{% if seo_title == site.title %}{{ site.title | escape }}{% else %}{{ seo_title | escape }} - {{ site.title | escape }}{% endif %}</title>
@@ -100,7 +101,8 @@
     "@type": "Person",
     "name": {{ site.author.name | jsonify }},
     "url": {{ site.author.url | jsonify }}
-  }{% if page.schema_type == "WebApplication" %},
+  }{% if social_image %},
+  "image": {{ social_image | jsonify }}{% endif %}{% if page.schema_type == "WebApplication" %},
   "applicationCategory": "UtilitiesApplication",
   "operatingSystem": "Any",
   "isAccessibleForFree": true{% endif %}
