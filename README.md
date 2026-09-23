@@ -5,7 +5,7 @@ This is my personal website built with Jekyll, hosted on GitHub Pages. Visit it 
 ## Project Structure
 
 - `index.html` - Main landing page
-- `blog.markdown` - Blog page showing all posts
+- `blog.html` - Blog page showing all posts
 - `_posts/` - Directory containing blog posts
 - `css/` - Stylesheets
 - `_includes/` - Reusable components like navigation
@@ -61,4 +61,4 @@ The site is automatically built and deployed to GitHub Pages when changes are pu
 
 ## License
 
-All rights reserved. The content and code in this repository may not be used without permission. 
+All rights reserved. The content and code in this repository may not be used without permission.
